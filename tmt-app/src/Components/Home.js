@@ -2,6 +2,10 @@ import React from "react";
 import '../Styling/Home.css'
 import ForwardArrow from '../Images/Forward.png';
 import MilkTeaBlob from '../Images/MilkTeaBlob.png';
+import LycheeRectangle from '../Images/LycheeRectangle.png';
+import MilkTeaSwiggle2 from '../Images/MilkTeaSwiggle2.png';
+import ThaiTeaSwiggle1 from '../Images/ThaiTeaSwiggle1.png';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 function Home(){
     return(
@@ -29,6 +33,27 @@ function Home(){
                             with us to find the perfect major for you!
                         </h6>
                     </span>
+                </div>
+            </div>
+
+            <div className="Home_Button_Container">
+                <div className="Home_Button_Bg_Container">
+                    <div className="Home_Button_Bg_Left">
+                        <img src={LycheeRectangle} id="Home_Button_Bg_Img1"></img>
+                        <img src={MilkTeaSwiggle2} id="Home_Button_Bg_Img2"></img>
+                    </div>
+                    <div className="Home_Button_Bg_Right">
+                        <img src={ThaiTeaSwiggle1} id="Home_Button_Bg_Img3"></img>
+                    </div>
+                </div>
+                <div className="Home_Button_Main">
+                    <button className="Home_Button_Main_Btn"> 
+                        Take the Quiz
+                    </button>
+                    <div className="Home_Button_Main_Link">
+                        <a target="_blank">See all Majors/Careers</a>
+                        <ArrowRightAltIcon></ArrowRightAltIcon>
+                    </div>
                 </div>
             </div>
             

@@ -1,6 +1,6 @@
 .Home_Container{
     width: 100%;
-    height: 80vh;
+    height: 87vh;
     padding-top: 7.5rem;
     overflow: hidden;
 }
@@ -40,7 +40,7 @@
 .Home_Hero_Background{
     position: absolute;
     top: 0;
-    z-index: -2;
+    z-index: -3;
     width: 1585px;
     padding: 2rem 0;
 }
@@ -89,6 +89,97 @@
 }
 
 
+/*
+    Home page Buttons Stlying
+*/
+.Home_Button_Container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.Home_Button_Main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+}
+.Home_Button_Main_Btn{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFFFFF;
+    background-color: #73956F;
+    border-radius: 8px;
+    border: 0;
+    padding: 1rem 5rem;
+    cursor: pointer;
+}
+.Home_Button_Main_Btn:hover{
+    background-color: #732C2C;
+}
+
+.Home_Button_Main_Link{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 30px;
+    color: #1B1D2E;
+    text-decoration-line: underline;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.Home_Button_Main_Link svg{
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+/*
+    Background Styling for Button Section
+        -Bottom of home page
+*/
+.Home_Button_Bg_Container{
+    position: absolute;
+    bottom: -125%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: -1;
+}
+.Home_Button_Bg_Left{
+    position: relative;
+}
+.Home_Button_Bg_Right{
+    position: relative;
+    right: -2.5%;
+}
+#Home_Button_Bg_Img1{
+    width: 150%;
+    vertical-align: middle;
+    transform: rotate(133.23deg);
+}
+#Home_Button_Bg_Img2{
+    width: 250%;
+    transform: rotate(32.27deg);
+    position: absolute;
+    left: -60%;
+    top: 15%;
+}
+#Home_Button_Bg_Img3{
+    width: 100%;
+    transform: rotate(-33.7deg);
+}
+
 @media screen and (min-width: 750px){
     .Home_Hero_Text_1 h1{
         font-size: 48px;
@@ -109,4 +200,7 @@
         font-size: 24px;
         line-height: 36px;
     }
+    
 }
+
+
