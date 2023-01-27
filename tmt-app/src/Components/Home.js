@@ -14,18 +14,18 @@ function Home(){
             <div className="Home_Path_Container">
                 <div className="Home_Path_Wrapper">
                     <span>Student Projects</span>
-                    <img src={ForwardArrow}></img>
+                    <img src={ForwardArrow} alt="ForwardArrow"></img>
                     <span>Major Picker</span>
                 </div>
             </div>
 
             <div className="Home_Hero_Container">
                 <div className="Home_Hero_Background">
-                    <img src={MilkTeaBlob}></img>
+                    <img src={MilkTeaBlob} alt="MilkTeaBlob"></img>
                 </div>
                 <div className="Home_Hero_Text">
                     <span className="Home_Hero_Text_1">
-                        <h1>Can't decide between majoring in business, biology, or art?</h1>
+                        <h1>Can&apos;t decide between majoring in business, biology, or art?</h1>
                     </span>
                     <span className="Home_Hero_Text_2">
                         <h6>
@@ -39,11 +39,11 @@ function Home(){
             <div className="Home_Button_Container">
                 <div className="Home_Button_Bg_Container">
                     <div className="Home_Button_Bg_Left">
-                        <img src={LycheeRectangle} id="Home_Button_Bg_Img1"></img>
-                        <img src={MilkTeaSwiggle2} id="Home_Button_Bg_Img2"></img>
+                        <img src={LycheeRectangle} id="Home_Button_Bg_Img1" alt="LycheeRectangle"></img>
+                        <img src={MilkTeaSwiggle2} id="Home_Button_Bg_Img2" alt="MilkTeaSwiggle2"></img>
                     </div>
                     <div className="Home_Button_Bg_Right">
-                        <img src={ThaiTeaSwiggle1} id="Home_Button_Bg_Img3"></img>
+                        <img src={ThaiTeaSwiggle1} id="Home_Button_Bg_Img3" alt="ThaiTeaSwiggle1"></img>
                     </div>
                 </div>
                 <div className="Home_Button_Main">
@@ -51,7 +51,7 @@ function Home(){
                         Take the Quiz
                     </button>
                     <div className="Home_Button_Main_Link">
-                        <a target="_blank">See all Majors/Careers</a>
+                        <a href="google.com" target="_blank">See all Majors/Careers</a>
                         <ArrowRightAltIcon></ArrowRightAltIcon>
                     </div>
                 </div>
