@@ -1,23 +1,8 @@
-.Home_Container{
-    width: 100%;
-    height: 87vh;
-    padding-top: 7.5rem;
-    overflow: hidden;
-}
 /*
  Subheader styling
 */
-.Home_Path_Container{
-    padding-left: 12%;
-}
 .Home_Path_Wrapper{
     width: 100%;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 30px;
-    color: #616587;
     display: flex;
     align-items: center;
 }
@@ -25,18 +10,9 @@
     width: 24px;
     margin: 0 16px;
 }
-
 /*
  Hero Text Styling
 */
-.Home_Hero_Container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 100px 0;
-}
-
 .Home_Hero_Background{
     position: absolute;
     top: 0;
@@ -51,103 +27,37 @@
     height: 575px;
     transform: rotateX(180deg); 
 }
-
-.Home_Hero_Text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
 .Home_Hero_Text_1{
     width: 75%;
     height: 100%;
-}
-.Home_Hero_Text_1 h1{
-    color: #1B1D2E;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 38px;
+    text-align: center;
     margin:0;
     padding-bottom: 1.5rem;
-    text-align: center;
 }
 .Home_Hero_Text_2{
     width: 45%;
     height: 100%;
-}
-.Home_Hero_Text_2 h6{
-    color: #1B1D2E;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 18px;
     text-align: center;
     margin: 2rem 0;
 }
-
-
 /*
     Home page Buttons Stlying
 */
-.Home_Button_Container{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-.Home_Button_Main{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: auto;
-}
-.Home_Button_Main_Btn{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 48px;
-    color: #FFFFFF;
-    background-color: #73956F;
-    border-radius: 8px;
-    border: 0;
-    padding: 1rem 5rem;
-    cursor: pointer;
-}
-.Home_Button_Main_Btn:hover{
-    background-color: #732C2C;
-}
-
 .Home_Button_Main_Link{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 30px;
-    color: #1B1D2E;
-    text-decoration-line: underline;
-    cursor: pointer;
+    text-decoration: underline;
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-top: 4rem;
 }
-
 .Home_Button_Main_Link svg{
     padding-top: 3px;
     padding-left: 10px;
 }
-
 /*
     Background Styling for Button Section
         -Bottom of home page
 */
-.Home_Button_Bg_Container{
+.Home_Button_Bg_Wrapper{
     position: absolute;
     bottom: -125%;
     width: 100%;
@@ -200,7 +110,6 @@
         font-size: 24px;
         line-height: 36px;
     }
-    
 }
 
 
