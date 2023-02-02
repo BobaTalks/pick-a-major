@@ -65,7 +65,7 @@ export const CustomTheme = createTheme({
                 fontSize: '28px',
                 lineHeight: '42px'
             },
-            '@media (max-width:1350px)':{
+            '@media (max-width:1050px)':{
                 fontWeight: 700,
                 fontSize: '24px',
                 lineHeight: '38px'
