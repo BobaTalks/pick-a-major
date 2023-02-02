@@ -22,38 +22,55 @@ function Home(){
             }}
         >
             <Container>
-                <div className="Home_Path_Wrapper">
-                    <span>
-                        <Typography variant="CustomSubHeading" color="#616587">Student Projects</Typography>
-                    </span>
-                    <img src={ForwardArrow} alt="ForwardArrow"/>
-                    <span>
-                        <Typography variant="CustomSubHeading" color="#616587">Major Picker</Typography>
-                    </span>
-                </div>
+                <Container 
+                    sx={{
+                        width:"100%", 
+                        display:"flex", 
+                        alignItems:"center",
+                        textAlign:"center"
+                    }}
+                >
+                    <Typography variant="CustomSubHeading" sx={{color:"BobaHighlight.main"}}>Student Projects</Typography>
+                    <img id="Home_Path_Arrow"src={ForwardArrow} alt="ForwardArrow"/>
+                    <Typography variant="CustomSubHeading" sx={{color:"BobaHighlight.main"}}>Major Picker</Typography>
+                </Container>
             </Container>
 
             <FlexContainer sx={{paddingY:"6.25rem"}}>
-                <div className="Home_Hero_Background">
-                    <img src={MilkTeaBlob} alt="MilkTeaBlob"/>
-                </div>
+                <Container 
+                    sx={{
+                        position: "absolute",
+                        top: "0",
+                        zIndex: "-3",
+                        minWidth: "1585px",
+                        paddingY: "2rem",
+                    }}>
+                    <img id="Home_Hero_Background" src={MilkTeaBlob} alt="MilkTeaBlob"/>
+                </Container>
                 <FlexContainer sx={{flexDirection:"column", position:"none"}}>
-                    <span className="Home_Hero_Text_1">
+                    <Container sx={{textAlign:"center", paddingBottom:"1.5rem"}}>
                         <Typography variant="CustomTitle" sx={{color:"Boba.main"}}>
                             Can&apos;t decide between majoring in business, biology, or art?
                         </Typography>
-                    </span>
-                    <span className="Home_Hero_Text_2">
+                    </Container>
+                    <Container sx={{textAlign:"center", marginY:"1.75rem"}} maxWidth="md">
                         <Typography variant="CustomHeading3">
                             No one can master multiple subjects the way you do. Spend 2 minutes 
                             with us to find the perfect major for you!
                         </Typography>
-                    </span>
+                    </Container>
                 </FlexContainer>
             </FlexContainer>
 
             <FlexContainer sx={{flexDirection:"row"}}>
-                <div className="Home_Button_Bg_Wrapper">
+                <FlexContainer 
+                    sx={{
+                        position: "absolute",
+                        bottom:"-125%",
+                        justifyContent: "space-between",
+                        zIndex: "-1",  
+                    }}
+                >
                     <div className="Home_Button_Bg_Left">
                         <img 
                             src={LycheeRectangle} 
@@ -73,11 +90,10 @@ function Home(){
                             alt="ThaiTeaSwiggle1"
                         />
                     </div>
-                </div>
+                </FlexContainer>
                 <FlexContainer 
                     sx={{
                         flexDirection:"column", 
-                        position:"none",
                         height:"auto"
                     }}
                 >
@@ -87,21 +103,20 @@ function Home(){
                         </Typography>
                     </PrimaryBtn>
  
-                    <div className="Home_Button_Main_Link">
+                    <div id="Home_Button_Main_Link">
                         <Link
                             sx={{color:"Boba.main"}}
                             underline="none"
                             href="google.com" 
                             target="_blank"
-                            rel="noopener" 
+                            rel="noopener noreferrer" 
                             aria-label="Learn more about other different majors"
                         >
                             <Typography variant="CustomSubHeading">
                                 See all Majors/Careers
                             </Typography>
-                            
                         </Link>
-                        <ArrowRightAltIcon />
+                        <ArrowRightAltIcon sx={{paddingTop:"3px", paddingLeft:"10px"}}/>
                     </div>
                     
                 </FlexContainer>

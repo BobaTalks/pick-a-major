@@ -32,7 +32,22 @@ export const CustomTheme = createTheme({
             fontFamily: 'Poppins',
             fontWeight: 700,
             fontSize: '64px',
-            lineHeight: '96px'
+            lineHeight: '96px',
+            '@media (max-width:1350px)':{
+                fontWeight: 700,
+                fontSize: '52px',
+                lineHeight: '72px'
+            },
+            '@media (max-width:1050px)':{
+                fontWeight: 700,
+                fontSize: '42px',
+                lineHeight: '52px'
+            },
+            '@media (max-width:750px)':{
+                fontWeight: 700,
+                fontSize: '32px',
+                lineHeight: '38px'
+            }
         },
         CustomHeading1: {
             fontFamily: 'Poppins',
@@ -44,13 +59,38 @@ export const CustomTheme = createTheme({
             fontFamily: 'Poppins',
             fontWeight: 700,
             fontSize: '32px',
-            lineHeight: '48px'
+            lineHeight: '48px',
+            '@media (max-width:1350px)':{
+                fontWeight: 700,
+                fontSize: '28px',
+                lineHeight: '42px'
+            },
+            '@media (max-width:1350px)':{
+                fontWeight: 700,
+                fontSize: '24px',
+                lineHeight: '38px'
+            },
+            '@media (max-width:750px)':{
+                fontWeight: 700,
+                fontSize: '20px',
+                lineHeight: '34px'
+            }
         },
         CustomHeading3: {
             fontFamily: 'Poppins',
             fontWeight: 700,
             fontSize: '24px',
-            lineHeight: '36px'
+            lineHeight: '36px',
+            '@media (max-width:1350px)':{
+                fontWeight: 600,
+                fontSize: '20px',
+                lineHeight: '30px'
+            },
+            '@media (max-width:750px)':{
+                fontWeight: 600,
+                fontSize: '16px',
+                lineHeight: '24px'
+            }
         },
         CustomSubHeading: {
             fontFamily: 'Poppins',
@@ -70,6 +110,13 @@ export const CustomTheme = createTheme({
             fontSize: '16px',
             lineHeight: '24px'
         }
+    },
+    components:{
+        MuiContainer:{
+            defaultProps:{
+                disableGutters: true
+            }
+        }
     }
 })
 
@@ -81,6 +128,15 @@ export const PrimaryBtn = styled(Button)({
     padding: '1rem 5rem',
     '&:hover':{
         backgroundColor: '#732C2C'
+    },
+    '@media (max-width:1350px)':{
+        padding: '1rem 4rem',
+    },
+    '@media (max-width:1050px)':{
+        padding: '1rem 3rem',
+    },
+    '@media (max-width:750px)':{
+        padding: '1rem 2rem',
     }
 });
 
