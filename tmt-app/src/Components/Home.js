@@ -91,19 +91,19 @@ function Home(){
                     </PrimaryBtn>
  
                     <div className="Home_Button_Main_Link">
-                        <RouterLink to="/guide" >
-                            <Link
-                                sx={{color:"Boba.main"}}
-                                underline="none"
-                                target="_blank"
-                                rel="noopener noreferrer" 
-                                aria-label="Learn more about other different majors"
-                            >
-                                <Typography variant="CustomSubHeading">
-                                    See all Majors/Careers
-                                </Typography>
-                            </Link>
-                        </RouterLink>
+                        <Link
+                            sx={{color:"Boba.main"}}
+                            underline="none"
+                            target="_blank"
+                            rel="noopener noreferrer" 
+                            aria-label="Learn more about other different majors"
+                            component={RouterLink}
+                            to="/guide"
+                        >
+                            <Typography variant="CustomSubHeading">
+                                See all Majors/Careers
+                            </Typography>
+                        </Link>
                         <ArrowRightAltIcon sx={{paddingTop:"3px", paddingLeft:"10px"}}/>
                     </div>
                     
