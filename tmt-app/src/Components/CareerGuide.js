@@ -1,13 +1,13 @@
 import React from "react";
 import { Container } from "@mui/system";
-import BobaPath from "./BobaPath";
+import Breadcrumb from "./Breadcrumb";
 
 
 
 function CareerGuide(){
     return(
         <Container>
-            <BobaPath />
+            <Breadcrumb />
         </Container>
     )
 }

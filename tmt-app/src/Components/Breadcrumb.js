@@ -2,7 +2,7 @@ import React from "react";
 import {Breadcrumbs, Typography} from '@mui/material';
 import ForwardArrow from '../Images/Forward.png';
 
-function BobaPath(){
+function Breadcrumb(){
     return(
         
         <Breadcrumbs
@@ -27,4 +27,4 @@ function BobaPath(){
     )
 }
 
-export default BobaPath;
+export default Breadcrumb;

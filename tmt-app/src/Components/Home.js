@@ -7,7 +7,7 @@ import LycheeRectangle from '../Images/LycheeRectangle.png';
 import MilkTeaSwiggle2 from '../Images/MilkTeaSwiggle2.png';
 import ThaiTeaSwiggle1 from '../Images/ThaiTeaSwiggle1.png';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
-import BobaPath from "./BobaPath";
+import Breadcrumb from "./Breadcrumb";
 import {Link as RouterLink} from "react-router-dom";
 
 
@@ -22,7 +22,7 @@ function Home(){
                 minHeight:"100vh"
             }}
         >
-            <BobaPath />
+            <Breadcrumb />
             <FlexContainer sx={{paddingY:"6.25rem"}}>
                 <Container 
                     sx={{
