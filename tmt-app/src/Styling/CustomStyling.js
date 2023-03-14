@@ -78,7 +78,7 @@ export const CustomTheme = createTheme({
     },
     CustomHeading3: {
       fontFamily: "Poppins",
-      fontWeight: 700,
+      fontWeight: 600,
       fontSize: "24px",
       lineHeight: "36px",
       "@media (max-width:1350px)": {
@@ -110,12 +110,38 @@ export const CustomTheme = createTheme({
       fontSize: "16px",
       lineHeight: "24px",
     },
+    button: {
+      textTransform: "none",
+    },
   },
   components: {
     MuiContainer: {
       defaultProps: {
         disableGutters: true,
       },
+    },
+    MuiToggleButton: {
+      variants: [
+        {
+          props: { variant: "customToggleStyle" },
+          style: {
+            color: "#1B1D2E",
+            border: "none",
+            borderRadius: "0",
+            "&:hover": {
+              backgroundColor: "rgba(0,0,0,0)",
+            },
+            "&.Mui-selected:hover": {
+              backgroundColor: "rgba(0,0,0,0)",
+            },
+            "&.Mui-selected": {
+              color: "#73956F",
+              borderBottom: "2px solid #73956F",
+              backgroundColor: "rgba(0,0,0,0)",
+            },
+          },
+        },
+      ],
     },
   },
 });
@@ -145,5 +171,4 @@ export const FlexContainer = styled(Container)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
-  minWidth: "100%",
 });
