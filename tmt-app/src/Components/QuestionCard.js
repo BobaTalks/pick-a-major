@@ -35,18 +35,23 @@ const QuestionCard = ({ item }) => {
     flexGrow: 0,
     textAlign: "center",
     transition: "all 0.3s ease-in-out",
-    border: isSelected
-      ? "none"
-      : isHovered
-      ? `12px solid ${CustomTheme.palette.RedBean.main}`
-      : "none",
-    background: isSelected
-      ? CustomTheme.palette.ThaiTea.main
-      : isHovered
-      ? "white"
-      : CustomTheme.palette.BobaHighlight.main,
-    color: isHovered ? "black" : "white",
   };
+
+  if (isSelected) {
+    style.border = "none";
+    style.background = CustomTheme.palette.ThaiTea.main;
+    style.color = "white";
+  } else {
+    if (isHovered) {
+      style.border = `12px solid ${CustomTheme.palette.RedBean.main}`;
+      style.background = "white";
+      style.color = "black";
+    } else {
+      style.border = "none";
+      style.background = CustomTheme.palette.BobaHighlight.main;
+      style.color = "white";
+    }
+  }
 
   return (
     <Grid
@@ -57,14 +62,15 @@ const QuestionCard = ({ item }) => {
       onMouseOver={handleHover}
       onMouseLeave={handleLeave}
     >
-      {isSelected ? (
+      {isSelected && (
         <>
           <Box component="img" src={item.icon} alt={`${item.title} icon`} />
           <Typography variant="CustomHeading3" sx={{ color: "white" }}>
             {item.title}
           </Typography>
         </>
-      ) : isHovered ? (
+      )}
+      {isHovered && !isSelected && (
         <>
           <Typography variant="CustomHeading3" sx={{ color: "black" }}>
             {item.title}
@@ -73,7 +79,8 @@ const QuestionCard = ({ item }) => {
             {item.info}
           </Typography>
         </>
-      ) : (
+      )}
+      {!isSelected && !isHovered && (
         <>
           <Box component="img" src={item.icon} alt={`${item.title} icon`} />
           <Typography variant="CustomHeading3" sx={{ color: "white" }}>
