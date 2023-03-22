@@ -20,21 +20,21 @@ const QuestionCard = ({ item }) => {
   };
 
   const style = {
-    margin: "0.6rem",
-    padding: "1rem",
-    gap: "0.5rem",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
     alignItems: "center",
-    width: "240px",
-    minHeight: "152px",
-    boxShadow: "6px 6px 16px rgba(0, 0, 0, 0.16)",
     borderRadius: "36px",
+    boxShadow: "6px 6px 16px rgba(0, 0, 0, 0.16)",
+    display: "flex",
     flex: "none",
+    flexDirection: "column",
     flexGrow: 0,
+    gap: "0.5rem",
+    justifyContent: "center",
+    margin: "0.6rem",
+    minHeight: "152px",
+    padding: "1rem",
     textAlign: "center",
     transition: "all 0.3s ease-in-out",
+    width: "240px",
   };
 
   if (isSelected) {
