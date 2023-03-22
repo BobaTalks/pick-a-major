@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import "../Styling/Home.css";
-import { Typography, Grid, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
 import { CustomTheme } from "../Styling/CustomStyling";
 
 const QuestionCard = ({ item }) => {
@@ -19,45 +18,41 @@ const QuestionCard = ({ item }) => {
     setIsSelected(!isSelected);
   };
 
-  const style = {
+  const sx = {
     alignItems: "center",
     borderRadius: "36px",
     boxShadow: "6px 6px 16px rgba(0, 0, 0, 0.16)",
     display: "flex",
-    flex: "none",
     flexDirection: "column",
-    flexGrow: 0,
     gap: "0.5rem",
+    height: "152px",
     justifyContent: "center",
     margin: "0.6rem",
-    minHeight: "152px",
-    padding: "1rem",
+    maxWidth: "240px",
     textAlign: "center",
     transition: "all 0.3s ease-in-out",
-    width: "240px",
   };
 
   if (isSelected) {
-    style.border = "none";
-    style.background = CustomTheme.palette.ThaiTea.main;
-    style.color = "white";
+    sx.border = "none";
+    sx.background = CustomTheme.palette.ThaiTea.main;
+    sx.color = "white";
   } else {
     if (isHovered) {
-      style.border = `12px solid ${CustomTheme.palette.RedBean.main}`;
-      style.background = "white";
-      style.color = "black";
+      sx.border = `12px solid ${CustomTheme.palette.RedBean.main}`;
+      sx.background = "white";
+      sx.color = "black";
     } else {
-      style.border = "none";
-      style.background = CustomTheme.palette.BobaHighlight.main;
-      style.color = "white";
+      sx.border = "none";
+      sx.background = CustomTheme.palette.BobaHighlight.main;
+      sx.color = "white";
     }
   }
 
   return (
-    <Grid
-      item
+    <Box
       key={item.title}
-      style={style}
+      style={sx}
       onClick={handleClick}
       onMouseOver={handleHover}
       onMouseLeave={handleLeave}
@@ -88,7 +83,7 @@ const QuestionCard = ({ item }) => {
           </Typography>
         </>
       )}
-    </Grid>
+    </Box>
   );
 };
 
