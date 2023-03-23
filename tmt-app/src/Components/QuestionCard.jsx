@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Typography, Box } from "@mui/material";
+import { styled, Typography, Box } from "@mui/material";
 import { CustomTheme } from "../Styling/CustomStyling";
 
 const QuestionCard = ({ item }) => {
@@ -33,31 +33,38 @@ const QuestionCard = ({ item }) => {
     transition: "all 0.3s ease-in-out",
   };
 
-  if (isSelected) {
-    sx.border = "none";
-    sx.background = CustomTheme.palette.ThaiTea.main;
-    sx.color = "white";
-  } else {
-    if (isHovered) {
-      sx.border = `12px solid ${CustomTheme.palette.RedBean.main}`;
-      sx.background = "white";
-      sx.color = "black";
-    } else {
-      sx.border = "none";
-      sx.background = CustomTheme.palette.BobaHighlight.main;
-      sx.color = "white";
-    }
-  }
+  const StyledBox = styled(Box)(({ isSelected }) => ({
+    background: isSelected
+      ? CustomTheme.palette.ThaiTea.main
+      : CustomTheme.palette.BobaHighlight.main,
+    border: `12px solid ${
+      isSelected
+        ? CustomTheme.palette.ThaiTea.main
+        : CustomTheme.palette.BobaHighlight.main
+    }`,
+    ...(!isSelected && {
+      "&:hover": {
+        border: `12px solid ${CustomTheme.palette.RedBean.main}`,
+        background: "white",
+      },
+    }),
+  }));
 
   return (
-    <Box
+    <StyledBox
+      isSelected={isSelected}
       key={item.title}
-      style={sx}
+      sx={sx}
       onClick={handleClick}
       onMouseOver={handleHover}
       onMouseLeave={handleLeave}
     >
-      {isSelected && (
+      {isHovered && !isSelected ? (
+        <>
+          <Typography variant="CustomHeading3">{item.title}</Typography>
+          <Typography variant="CustomBody">{item.info}</Typography>
+        </>
+      ) : (
         <>
           <Box component="img" src={item.icon} alt={`${item.title} icon`} />
           <Typography variant="CustomHeading3" sx={{ color: "white" }}>
@@ -65,25 +72,7 @@ const QuestionCard = ({ item }) => {
           </Typography>
         </>
       )}
-      {isHovered && !isSelected && (
-        <>
-          <Typography variant="CustomHeading3" sx={{ color: "black" }}>
-            {item.title}
-          </Typography>
-          <Typography variant="CustomBody" sx={{ color: "black" }}>
-            {item.info}
-          </Typography>
-        </>
-      )}
-      {!isSelected && !isHovered && (
-        <>
-          <Box component="img" src={item.icon} alt={`${item.title} icon`} />
-          <Typography variant="CustomHeading3" sx={{ color: "white" }}>
-            {item.title}
-          </Typography>
-        </>
-      )}
-    </Box>
+    </StyledBox>
   );
 };
 
