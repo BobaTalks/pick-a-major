@@ -23,6 +23,9 @@ export const CustomTheme = createTheme({
     InactiveGrey: {
       main: "#5B5D6C",
     },
+    InactiveGrey2: {
+      main: "#9EA0B1",
+    },
     Boba: {
       main: "#1B1D2E",
     },

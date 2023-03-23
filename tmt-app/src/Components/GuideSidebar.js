@@ -2,20 +2,25 @@ import React from "react";
 import { FlexContainer, PrimaryBtn } from "../Styling/CustomStyling.js";
 import { Box, Typography } from "@mui/material";
 
-function GuideSidebar() {
+function GuideSidebar({ toggleButton }) {
   return (
     <FlexContainer sx={{ flexDirection: "column" }}>
       <Box sx={{ width: "60%", textAlign: "center" }}>
-        <FlexContainer>
+        <Box>
           <Typography variant="CustomTitle">Major Guide</Typography>
-        </FlexContainer>
-        <FlexContainer>
+        </Box>
+        <Box>
           <Typography variant="CustomHeading2">
             Explore majors, careers, & more
           </Typography>
-        </FlexContainer>
+        </Box>
       </Box>
-      <PrimaryBtn disabled sx={{ backgroundColor: "#9EA0B1" }}>
+      <PrimaryBtn
+        disabled={toggleButton}
+        sx={{
+          backgroundColor: toggleButton ? "InactiveGrey2.main" : "Matcha.main",
+        }}
+      >
         <Typography variant="CustomHeading2">Take the Quiz</Typography>
       </PrimaryBtn>
     </FlexContainer>

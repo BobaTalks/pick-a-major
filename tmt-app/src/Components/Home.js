@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "../Styling/Home.css";
 import { PrimaryBtn, FlexContainer } from "../Styling/CustomStyling.js";
-import { Container, Typography, Button } from "@mui/material";
+import { Container, Typography, Button, Box } from "@mui/material";
 import MilkTeaBlob from "../Images/MilkTeaBlob.png";
 import LycheeRectangle from "../Images/LycheeRectangle.png";
 import MilkTeaSwiggle2 from "../Images/MilkTeaSwiggle2.png";
@@ -23,8 +22,13 @@ function Home() {
       sx={{
         minWidth: "100%",
         paddingTop: "7.5rem",
-        overflow: "hidden",
         minHeight: "100vh",
+        overflow: {
+          xs: "hidden",
+          sm: "hidden",
+          md: "hidden",
+          lg: "visible",
+        },
       }}
     >
       <Breadcrumb />
@@ -33,15 +37,21 @@ function Home() {
           sx={{
             position: "absolute",
             top: "0",
-            zIndex: "-3",
+            zIndex: "-1500",
             minWidth: "1585px",
             paddingY: "2rem",
           }}
         >
           <img
-            className="Home_Hero_Background"
             src={MilkTeaBlob}
             alt="MilkTeaBlob"
+            style={{
+              position: "relative",
+              top: "0",
+              width: "100%",
+              height: "575px",
+              transform: "rotateX(180deg)",
+            }}
           />
         </Container>
         <FlexContainer sx={{ flexDirection: "column", position: "none" }}>
@@ -66,32 +76,59 @@ function Home() {
         <FlexContainer
           sx={{
             position: "absolute",
-            bottom: "-125%",
             justifyContent: "space-between",
             flexDirection: "row",
-            zIndex: "-1",
+            zIndex: "-1000",
             minWidth: "100%",
+            overflow: "hidden",
           }}
         >
-          <div className="Home_Button_Bg_Left">
+          <Box
+            sx={{
+              position: "relative",
+            }}
+          >
             <img
               src={LycheeRectangle}
-              className="Home_Button_Bg_Img1"
               alt="LycheeRectangle"
+              style={{
+                width: "150%",
+                verticalAlign: "middle",
+                transform: "rotate(133.23deg)",
+              }}
             />
             <img
               src={MilkTeaSwiggle2}
-              className="Home_Button_Bg_Img2"
               alt="MilkTeaSwiggle2"
+              style={{
+                width: "250%",
+                transform: "rotate(32.27deg)",
+                position: "absolute",
+                left: "-60%",
+                top: "15%",
+              }}
             />
-          </div>
-          <div className="Home_Button_Bg_Right">
+          </Box>
+          <Box
+            sx={{
+              position: "relative",
+              right: "-2.5%",
+              display: {
+                xs: "none",
+                md: "none",
+                lg: "block",
+              },
+            }}
+          >
             <img
               src={ThaiTeaSwiggle1}
-              className="Home_Button_Bg_Img3"
               alt="ThaiTeaSwiggle1"
+              style={{
+                width: "100%",
+                transform: "rotate(-33.7deg)",
+              }}
             />
-          </div>
+          </Box>
         </FlexContainer>
         <FlexContainer
           sx={{
@@ -104,7 +141,13 @@ function Home() {
           </PrimaryBtn>
 
           <FlexContainer sx={{ marginTop: "4.5rem", flexDirection: "column" }}>
-            <Button onClick={toggleDisplayGuide}>
+            <Button
+              onClick={toggleDisplayGuide}
+              sx={{
+                color: "black",
+                textDecoration: "underline",
+              }}
+            >
               <Typography variant="CustomSubHeading">
                 See all Majors/Careers
               </Typography>
@@ -123,21 +166,32 @@ function Home() {
       </FlexContainer>
       <Container
         sx={{
-          display: "flex",
-          alignItems: "flex-start",
-          paddingTop: "8rem",
+          marginY: "5rem",
           opacity: displayGuide ? "100%" : "0%",
           visibility: displayGuide ? "visible" : "hidden",
-          transition: "450ms ease-in-out",
           position: "absolute",
           left: "50%",
           transform: "translate(-50%, 0)",
-          bottom: displayGuide ? "-50%" : "-10%",
-          zIndex: "-10",
+          top: displayGuide ? { sm: "750px", md: "850px", lg: "950px" } : "0px",
+          zIndex: "1500",
         }}
       >
-        <MajorCareerList />
-        <GuideSidebar />
+        <FlexContainer
+          sx={{
+            alignItems: "flex-start",
+            flexDirection: {
+              xs: "column",
+              sm: "column",
+              md: "row",
+            },
+            justifyContent: "center",
+            backgroundColor: "white",
+            borderRadius: "10px",
+          }}
+        >
+          <MajorCareerList />
+          <GuideSidebar toggleButton={false} />
+        </FlexContainer>
       </Container>
     </Container>
   );

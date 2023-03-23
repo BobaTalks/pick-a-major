@@ -1,6 +1,6 @@
 import { React, Fragment } from "react";
 import { FlexContainer } from "../Styling/CustomStyling.js";
-import { Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { CAREERS_LIST, MAJORS_LIST } from "../constants/careerMajorList";
 
 function MajorCareerList() {
@@ -8,28 +8,45 @@ function MajorCareerList() {
     <FlexContainer
       sx={{
         alignItems: "flex-start",
+        marginY: "2rem",
+        paddingX: "0.5rem",
+        justifyContent: "space-around",
       }}
     >
-      <Container>
+      <Box sx={{ paddingX: "1rem" }}>
         <Typography variant="CustomHeading3" sx={{ marginBottom: "1rem" }}>
-          Major
+          Majors
         </Typography>
         <Fragment>
           {MAJORS_LIST.map((item) => (
-            <div key={item.id}>{item.name}</div>
+            <div
+              key={item.id}
+              style={{
+                padding: "0.25rem 0",
+              }}
+            >
+              {item.name}
+            </div>
           ))}
         </Fragment>
-      </Container>
-      <Container>
+      </Box>
+      <Box sx={{ paddingX: "1rem" }}>
         <Typography variant="CustomHeading3" sx={{ marginBottom: "1rem" }}>
           Careers
         </Typography>
         <Fragment>
           {CAREERS_LIST.map((item) => (
-            <div key={item.id}>{item.name}</div>
+            <div
+              key={item.id}
+              style={{
+                padding: "0.25rem 0",
+              }}
+            >
+              {item.name}
+            </div>
           ))}
         </Fragment>
-      </Container>
+      </Box>
     </FlexContainer>
   );
 }
