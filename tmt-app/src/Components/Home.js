@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { PrimaryBtn, FlexContainer } from "../Styling/CustomStyling.js";
 import { Container, Typography, Button, Box } from "@mui/material";
 import MilkTeaBlob from "../Images/MilkTeaBlob.png";
@@ -13,9 +13,25 @@ import GuideSidebar from "./GuideSidebar.js";
 
 function Home() {
   const [displayGuide, setDisplayGuide] = useState(false);
+  const scrollToTop = useRef(null);
+  const scrollToList = useRef(null);
   const toggleDisplayGuide = () => {
     setDisplayGuide((previous) => !previous);
   };
+
+  useEffect(() => {
+    let timer = null;
+    if (displayGuide) {
+      timer = setTimeout(
+        () => scrollToList.current.scrollIntoView({ behavior: "smooth" }),
+        200
+      );
+    } else {
+      scrollToTop.current.scrollIntoView({ behavior: "smooth" });
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayGuide]);
 
   return (
     <Container
@@ -30,6 +46,7 @@ function Home() {
           lg: "visible",
         },
       }}
+      ref={scrollToTop}
     >
       <Breadcrumb />
       <FlexContainer sx={{ paddingY: "6.25rem" }}>
@@ -175,6 +192,7 @@ function Home() {
           top: displayGuide ? { sm: "750px", md: "850px", lg: "950px" } : "0px",
           zIndex: "1500",
         }}
+        ref={scrollToList}
       >
         <FlexContainer
           sx={{
