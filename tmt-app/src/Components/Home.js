@@ -90,9 +90,19 @@ function Home() {
             height: "auto",
           }}
         >
-          <PrimaryBtn sx={{ color: "#FFFFFF" }}>
-            <Typography variant="CustomHeading2">Take the Quiz</Typography>
-          </PrimaryBtn>
+          <Link
+            sx={{ color: "Boba.main" }}
+            underline="none"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Learn more about other different majors"
+            component={RouterLink}
+            to="/questions/classes"
+          >
+            <PrimaryBtn sx={{ color: "#FFFFFF" }}>
+              <Typography variant="CustomHeading2">Take the Quiz</Typography>
+            </PrimaryBtn>
+          </Link>
 
           <div className="Home_Button_Main_Link">
             <Link
