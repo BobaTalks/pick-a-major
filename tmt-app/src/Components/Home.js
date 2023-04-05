@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { PrimaryBtn, FlexContainer } from "../Styling/CustomStyling.js";
 import { Container, Typography, Button, Box } from "@mui/material";
 import MilkTeaBlob from "../Images/MilkTeaBlob.png";
@@ -6,32 +6,15 @@ import LycheeRectangle from "../Images/LycheeRectangle.png";
 import MilkTeaSwiggle2 from "../Images/MilkTeaSwiggle2.png";
 import ThaiTeaSwiggle1 from "../Images/ThaiTeaSwiggle1.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import Breadcrumb from "./Breadcrumb";
 import MajorCareerList from "./MajorCareerList.js";
 import GuideSidebar from "./GuideSidebar.js";
 
 function Home() {
-  const [displayGuide, setDisplayGuide] = useState(false);
-  const scrollToTop = useRef(null);
   const scrollToList = useRef(null);
   const toggleDisplayGuide = () => {
-    setDisplayGuide((previous) => !previous);
+    scrollToList.current.scrollIntoView({ behavior: "smooth" });
   };
-
-  useEffect(() => {
-    let timer = null;
-    if (displayGuide) {
-      timer = setTimeout(
-        () => scrollToList.current.scrollIntoView({ behavior: "smooth" }),
-        200
-      );
-    } else {
-      scrollToTop.current.scrollIntoView({ behavior: "smooth" });
-    }
-
-    return () => clearTimeout(timer);
-  }, [displayGuide]);
 
   return (
     <Container
@@ -41,12 +24,9 @@ function Home() {
         minHeight: "100vh",
         overflow: {
           xs: "hidden",
-          sm: "hidden",
-          md: "hidden",
-          lg: "visible",
+          xl: "visible",
         },
       }}
-      ref={scrollToTop}
     >
       <Breadcrumb />
       <FlexContainer sx={{ paddingY: "6.25rem" }}>
@@ -168,32 +148,30 @@ function Home() {
               <Typography variant="CustomSubHeading">
                 See all Majors/Careers
               </Typography>
-              {displayGuide ? (
-                <ArrowUpwardIcon
-                  sx={{ paddingTop: "3px", paddingLeft: "10px" }}
-                />
-              ) : (
-                <ArrowDownwardIcon
-                  sx={{ paddingTop: "3px", paddingLeft: "10px" }}
-                />
-              )}
+              <ArrowDownwardIcon
+                sx={{ paddingTop: "3px", paddingLeft: "10px" }}
+              />
             </Button>
           </FlexContainer>
         </FlexContainer>
       </FlexContainer>
-      <Container
+      <FlexContainer
         sx={{
           marginY: "5rem",
-          opacity: displayGuide ? "100%" : "0%",
-          visibility: displayGuide ? "visible" : "hidden",
-          position: "absolute",
-          left: "50%",
-          transform: "translate(-50%, 0)",
-          top: displayGuide ? { sm: "750px", md: "850px", lg: "950px" } : "0px",
+          padding: "3rem 1rem 0 1rem",
+          position: "relative",
           zIndex: "1500",
+          minWidth: "100%",
+          flexDirection: "column",
+          alignItems: "flex-start",
+          justifyContent: "flex-start",
+          height: "85vh",
         }}
         ref={scrollToList}
       >
+        <Typography display="block" variant="CustomHeading3">
+          All Majors & Careers
+        </Typography>
         <FlexContainer
           sx={{
             alignItems: "flex-start",
@@ -203,14 +181,13 @@ function Home() {
               md: "row",
             },
             justifyContent: "center",
-            backgroundColor: "white",
-            borderRadius: "10px",
+            minWidth: "100%",
           }}
         >
           <MajorCareerList />
           <GuideSidebar toggleButton={false} />
         </FlexContainer>
-      </Container>
+      </FlexContainer>
     </Container>
   );
 }
