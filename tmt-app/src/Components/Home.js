@@ -6,7 +6,6 @@ import LycheeRectangle from "../Images/LycheeRectangle.png";
 import MilkTeaSwiggle2 from "../Images/MilkTeaSwiggle2.png";
 import ThaiTeaSwiggle1 from "../Images/ThaiTeaSwiggle1.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import Breadcrumb from "./Breadcrumb";
 import MajorCareerList from "./MajorCareerList.js";
 import GuideSidebar from "./GuideSidebar.js";
 
@@ -20,15 +19,12 @@ function Home() {
     <Container
       sx={{
         minWidth: "100%",
-        paddingTop: "7.5rem",
         minHeight: "100vh",
-        overflow: {
+        overflowX: {
           xs: "hidden",
-          xl: "visible",
         },
       }}
     >
-      <Breadcrumb />
       <FlexContainer sx={{ paddingY: "6.25rem" }}>
         <Container
           sx={{
@@ -77,39 +73,42 @@ function Home() {
             flexDirection: "row",
             zIndex: "-1000",
             minWidth: "100%",
-            overflow: "hidden",
           }}
         >
           <Box
             sx={{
               position: "relative",
+              height: "25vh",
             }}
           >
             <img
               src={LycheeRectangle}
               alt="LycheeRectangle"
               style={{
-                width: "150%",
+                width: "50%",
                 verticalAlign: "middle",
                 transform: "rotate(133.23deg)",
+                position: "absolute",
+                top: "-100%",
+                left: "-60%",
               }}
             />
             <img
               src={MilkTeaSwiggle2}
               alt="MilkTeaSwiggle2"
               style={{
-                width: "250%",
+                width: "100%",
                 transform: "rotate(32.27deg)",
-                position: "absolute",
-                left: "-60%",
-                top: "15%",
+                position: "relative",
+                left: "-55%",
+                top: "-50%",
               }}
             />
           </Box>
           <Box
             sx={{
               position: "relative",
-              right: "-2.5%",
+              right: "-7%",
               display: {
                 xs: "none",
                 md: "none",
