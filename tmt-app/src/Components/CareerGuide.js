@@ -1,6 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { FlexContainer } from "../Styling/CustomStyling.js";
+import MajorCard from "./MajorCard.js";
 
 function CareerGuide() {
   return (
@@ -56,6 +57,7 @@ function CareerGuide() {
             Your results are lost once you leave this page.
           </Typography>
         </FlexContainer>
+        <MajorCard />
       </Grid>
     </Grid>
   );
