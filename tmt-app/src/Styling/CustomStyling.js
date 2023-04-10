@@ -56,8 +56,23 @@ export const CustomTheme = createTheme({
     CustomHeading1: {
       fontFamily: "Poppins",
       fontWeight: 700,
-      fontSize: "36px",
+      fontSize: "38px",
       lineHeight: "54px",
+      "@media (max-width:1350px)": {
+        fontWeight: 700,
+        fontSize: "32px",
+        lineHeight: "52px",
+      },
+      "@media (max-width:1050px)": {
+        fontWeight: 700,
+        fontSize: "26px",
+        lineHeight: "50px",
+      },
+      "@media (max-width:750px)": {
+        fontWeight: 700,
+        fontSize: "20px",
+        lineHeight: "48px",
+      },
     },
     CustomHeading2: {
       fontFamily: "Poppins",
@@ -101,12 +116,32 @@ export const CustomTheme = createTheme({
       fontWeight: 600,
       fontSize: "20px",
       lineHeight: "30px",
+      "@media (max-width:1050px)": {
+        fontWeight: 600,
+        fontSize: "17px",
+        lineHeight: "30px",
+      },
+      "@media (max-width:750px)": {
+        fontWeight: 600,
+        fontSize: "14px",
+        lineHeight: "30px",
+      },
     },
     CustomBody: {
       fontFamily: "Poppins",
       fontWeight: 400,
       fontSize: "16px",
       lineHeight: "24px",
+      "@media (max-width:1050px)": {
+        fontWeight: 400,
+        fontSize: "16px",
+        lineHeight: "20px",
+      },
+      "@media (max-width:750px)": {
+        fontWeight: 400,
+        fontSize: "14px",
+        lineHeight: "16px",
+      },
     },
     CustomOverline: {
       fontFamily: "Poppins",

@@ -4,7 +4,9 @@ import Home from "./Components/Home";
 import { CustomTheme } from "./Styling/CustomStyling.js";
 import { ThemeProvider } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CareerGuide from "./Components/CareerGuide";
+import ResultsPage from "./Components/ResultsPage";
+import CareerPage from "./Components/CareerPage";
+import MajorPage from "./Components/MajorPage";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +15,15 @@ const router = createBrowserRouter([
   },
   {
     path: "/guide",
-    element: <CareerGuide />,
+    element: <ResultsPage />,
+  },
+  {
+    path: "/majorpage",
+    element: <MajorPage />,
+  },
+  {
+    path: "/careerpage",
+    element: <CareerPage />,
   },
 ]);
 

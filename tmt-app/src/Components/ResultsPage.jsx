@@ -1,9 +1,9 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { FlexContainer } from "../Styling/CustomStyling.js";
-import MajorCard from "./MajorCard.js";
+import ResultsCards from "./ResultsCards.jsx";
 
-function CareerGuide() {
+function ResultsPage() {
   return (
     <Grid
       container
@@ -57,10 +57,10 @@ function CareerGuide() {
             Your results are lost once you leave this page.
           </Typography>
         </FlexContainer>
-        <MajorCard />
+        <ResultsCards />
       </Grid>
     </Grid>
   );
 }
 
-export default CareerGuide;
+export default ResultsPage;

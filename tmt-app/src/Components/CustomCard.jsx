@@ -3,38 +3,20 @@ import {
   Card,
   CardContent,
   CardMedia,
-  Stack,
   Typography,
   Container,
 } from "@mui/material";
 import { ReactComponent as EmotionalIntelligence } from "../Images/icons/emotional_intelligence.svg";
+import { Link } from "react-router-dom";
 
-function MajorCard() {
-  const dummyData = [
-    {
-      id: 0,
-      name: "Education",
-      desc: "testing",
-      icon: "emotional_intelligence",
-    },
-    {
-      id: 1,
-      name: "Economics and Business",
-      desc: "test fdasf afas fsadf dsf dsf edsf ds fsdaf sd f asfsd fea fgdsffdsf dfasdf ds fsdafsdf fgsdaf ased fasd few gasef sWEAFGASDFAS FDFSA DFA FSADF EAFSDASD FGREAASDFG EF GRasdfga gadfaefadf asf ",
-      icon: "chemistry",
-    },
-  ];
+function CustomCard({ dummyData }) {
   return (
-    <Stack
-      spacing={3}
-      sx={{
-        width: "100%",
-        "&::after": {
-          content: "''",
-          width: "90%",
-          margin: "3rem auto",
-          border: "1px solid black",
-        },
+    <Link
+      rel="noopener noreferrer"
+      to="/careerpage"
+      state={{ data: dummyData }}
+      style={{
+        textDecoration: "none",
       }}
     >
       {dummyData.map((item) => {
@@ -47,10 +29,12 @@ function MajorCard() {
               backgroundColor: "Matcha.main",
               borderRadius: "15px",
               color: "white",
+              marginTop: "1rem",
               ":hover": {
                 color: "black",
                 backgroundColor: "BTMilkTea.main",
               },
+              cursor: "pointer",
             }}
           >
             <CardMedia
@@ -97,7 +81,7 @@ function MajorCard() {
                   variant="CustomHeading1"
                   sx={{
                     display: "block",
-                    width: "100%",
+                    width: "85%",
                     whiteSpace: "nowrap",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
@@ -135,8 +119,8 @@ function MajorCard() {
           </Card>
         );
       })}
-    </Stack>
+    </Link>
   );
 }
 
-export default MajorCard;
+export default CustomCard;
