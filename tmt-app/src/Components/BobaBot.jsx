@@ -6,27 +6,30 @@ function BobaBot({ text }) {
   return (
     <Box
       sx={{
-        alignItems: "center",
         display: "inline-flex",
         position: "relative",
       }}
     >
-      <img src={BobaBotLarge} alt={"Mascot Icon"} />
+      <img
+        src={BobaBotLarge}
+        alt={`Mascot icon with speech bubble that says ${text}`}
+      />
       <Box
         sx={{
           alignItems: "center",
           display: "flex",
           height: "40%",
-          left: "15%",
+          justifyContent: "center",
+          left: "1.5rem",
           position: "absolute",
-          top: "10%",
+          top: "2rem",
           width: "70%",
         }}
       >
         <Typography
           sx={{
-            fontWeight: "bold",
             textAlign: "center",
+            overflow: "hidden",
           }}
         >
           {text}
