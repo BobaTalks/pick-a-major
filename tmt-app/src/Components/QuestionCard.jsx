@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styled, Typography, Box } from "@mui/material";
 import { CustomTheme } from "../Styling/CustomStyling";
 
-const QuestionCard = ({ item, onClick }) => {
+const QuestionCard = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isSelected, setIsSelected] = useState(false);
 
@@ -28,7 +28,7 @@ const QuestionCard = ({ item, onClick }) => {
     height: "152px",
     justifyContent: "center",
     margin: "0.6rem",
-    width: "240px",
+    maxWidth: "240px",
     textAlign: "center",
     transition: "all 0.3s ease-in-out",
   };
