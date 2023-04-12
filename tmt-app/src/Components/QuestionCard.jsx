@@ -16,7 +16,6 @@ const QuestionCard = ({ item, onClick }) => {
 
   const handleClick = () => {
     setIsSelected(!isSelected);
-    onClick();
   };
 
   const sx = {
