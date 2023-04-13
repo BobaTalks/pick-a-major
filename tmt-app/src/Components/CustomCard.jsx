@@ -83,7 +83,6 @@ function CustomCard({ dummyData }) {
                   sx={{
                     display: "block",
                     width: "85%",
-                    whiteSpace: "nowrap",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
                     whiteSpace: "normal",
