@@ -1,14 +1,10 @@
-import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React from "react";
+import { useParams } from "react-router-dom";
 
 function CareerPage() {
-  const { state } = useLocation();
+  const careerChoice = useParams();
 
-  useEffect(() => {
-    console.log("testing", state.data);
-  }, [state]);
-
-  return <div>{state.data[0].name}</div>;
+  return <div>{careerChoice.career}</div>;
 }
 
 export default CareerPage;

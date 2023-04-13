@@ -18,11 +18,11 @@ const router = createBrowserRouter([
     element: <ResultsPage />,
   },
   {
-    path: "/majorpage",
+    path: "/major",
     element: <MajorPage />,
   },
   {
-    path: "/careerpage",
+    path: "/career/:career",
     element: <CareerPage />,
   },
 ]);

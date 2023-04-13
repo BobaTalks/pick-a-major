@@ -10,11 +10,11 @@ import { ReactComponent as EmotionalIntelligence } from "../Images/icons/emotion
 import { Link } from "react-router-dom";
 
 function CustomCard({ dummyData }) {
+  const career = "education";
   return (
     <Link
       rel="noopener noreferrer"
-      to="/careerpage"
-      state={{ data: dummyData }}
+      to={`/career/${career}`}
       style={{
         textDecoration: "none",
       }}
@@ -75,6 +75,7 @@ function CustomCard({ dummyData }) {
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
+                  alignItems: "center",
                 }}
               >
                 <Typography
@@ -85,6 +86,7 @@ function CustomCard({ dummyData }) {
                     whiteSpace: "nowrap",
                     overflow: "hidden",
                     textOverflow: "ellipsis",
+                    whiteSpace: "normal",
                   }}
                 >
                   {item.name}
@@ -94,12 +96,9 @@ function CustomCard({ dummyData }) {
               <Typography
                 variant="CustomBody"
                 sx={{
-                  display: "-webkit-box",
+                  display: "block",
                   overflow: "hidden",
                   textOverflow: "ellipsis",
-                  WebkitBoxOrient: "vertical",
-                  WebkitLineClamp: "2",
-                  whiteSpace: "normal",
                   maxWidth: "70%",
                   margin: "0.25rem 0",
                 }}

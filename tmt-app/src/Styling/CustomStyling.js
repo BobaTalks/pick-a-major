@@ -37,17 +37,17 @@ export const CustomTheme = createTheme({
       fontWeight: 700,
       fontSize: "64px",
       lineHeight: "96px",
-      "@media (max-width:1350px)": {
+      "@media (max-width:1200px)": {
         fontWeight: 700,
         fontSize: "52px",
         lineHeight: "72px",
       },
-      "@media (max-width:1050px)": {
+      "@media (max-width:900px)": {
         fontWeight: 700,
         fontSize: "42px",
         lineHeight: "52px",
       },
-      "@media (max-width:750px)": {
+      "@media (max-width:600px)": {
         fontWeight: 700,
         fontSize: "32px",
         lineHeight: "38px",
@@ -57,21 +57,21 @@ export const CustomTheme = createTheme({
       fontFamily: "Poppins",
       fontWeight: 700,
       fontSize: "38px",
-      lineHeight: "54px",
-      "@media (max-width:1350px)": {
+      lineHeight: "40px",
+      "@media (max-width:1200px)": {
         fontWeight: 700,
         fontSize: "32px",
-        lineHeight: "52px",
+        lineHeight: "34px",
       },
-      "@media (max-width:1050px)": {
+      "@media (max-width:900px)": {
         fontWeight: 700,
         fontSize: "26px",
-        lineHeight: "50px",
+        lineHeight: "28px",
       },
-      "@media (max-width:750px)": {
+      "@media (max-width:600px)": {
         fontWeight: 700,
         fontSize: "20px",
-        lineHeight: "48px",
+        lineHeight: "22px",
       },
     },
     CustomHeading2: {
@@ -79,17 +79,17 @@ export const CustomTheme = createTheme({
       fontWeight: 700,
       fontSize: "32px",
       lineHeight: "48px",
-      "@media (max-width:1350px)": {
+      "@media (max-width:1200px)": {
         fontWeight: 700,
         fontSize: "28px",
         lineHeight: "42px",
       },
-      "@media (max-width:1050px)": {
+      "@media (max-width:900px)": {
         fontWeight: 700,
         fontSize: "24px",
         lineHeight: "38px",
       },
-      "@media (max-width:750px)": {
+      "@media (max-width:600px)": {
         fontWeight: 700,
         fontSize: "20px",
         lineHeight: "34px",
@@ -100,12 +100,12 @@ export const CustomTheme = createTheme({
       fontWeight: 600,
       fontSize: "24px",
       lineHeight: "36px",
-      "@media (max-width:1350px)": {
+      "@media (max-width:1200px)": {
         fontWeight: 600,
         fontSize: "20px",
         lineHeight: "30px",
       },
-      "@media (max-width:750px)": {
+      "@media (max-width:600px)": {
         fontWeight: 600,
         fontSize: "16px",
         lineHeight: "24px",
@@ -116,12 +116,12 @@ export const CustomTheme = createTheme({
       fontWeight: 600,
       fontSize: "20px",
       lineHeight: "30px",
-      "@media (max-width:1050px)": {
+      "@media (max-width:900px)": {
         fontWeight: 600,
         fontSize: "17px",
         lineHeight: "30px",
       },
-      "@media (max-width:750px)": {
+      "@media (max-width:600px)": {
         fontWeight: 600,
         fontSize: "14px",
         lineHeight: "30px",
@@ -131,16 +131,16 @@ export const CustomTheme = createTheme({
       fontFamily: "Poppins",
       fontWeight: 400,
       fontSize: "16px",
-      lineHeight: "24px",
-      "@media (max-width:1050px)": {
+      lineHeight: "20px",
+      "@media (max-width:900px)": {
         fontWeight: 400,
         fontSize: "16px",
         lineHeight: "20px",
       },
-      "@media (max-width:750px)": {
+      "@media (max-width:600px)": {
         fontWeight: 400,
         fontSize: "14px",
-        lineHeight: "16px",
+        lineHeight: "20px",
       },
     },
     CustomOverline: {
