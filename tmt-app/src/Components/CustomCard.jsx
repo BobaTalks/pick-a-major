@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
   Card,
   CardContent,
@@ -12,112 +12,113 @@ import { Link } from "react-router-dom";
 function CustomCard({ dummyData }) {
   const career = "education";
   return (
-    <Link
-      rel="noopener noreferrer"
-      to={`/career/${career}`}
-      style={{
-        textDecoration: "none",
-      }}
-    >
+    <Fragment>
       {dummyData.map((item) => {
         return (
-          <Card
-            key={item.id}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              backgroundColor: "Matcha.main",
-              borderRadius: "15px",
-              color: "white",
-              marginTop: "1rem",
-              ":hover": {
-                color: "black",
-                backgroundColor: "BTMilkTea.main",
-              },
-              cursor: "pointer",
+          <Link
+            rel="noopener noreferrer"
+            to={`/career/${career}`}
+            style={{
+              textDecoration: "none",
             }}
+            key={item.id}
           >
-            <CardMedia
-              component="img"
-              image={item.icon}
-              alt="icon"
+            <Card
               sx={{
-                padding: {
-                  xs: "0.75rem",
-                  sm: "1.5rem",
-                  lg: "2rem",
+                display: "flex",
+                alignItems: "center",
+                backgroundColor: "Matcha.main",
+                borderRadius: "15px",
+                color: "white",
+                ":hover": {
+                  color: "black",
+                  backgroundColor: "BTMilkTea.main",
                 },
-                margin: "1rem",
-                height: {
-                  xs: "50px",
-                },
-                width: {
-                  xs: "50px",
-                },
-                borderRadius: "5px",
-                backgroundColor: "BobaHighlight.main",
-              }}
-            />
-            <CardContent
-              sx={{
-                display: "inline-block",
-                width: "100%",
-                overflow: "hidden",
-                whiteSpace: "nowrap",
-                padding: {
-                  xs: "0.25rem 1rem",
-                  md: "0.50rem 1.50rem",
-                  lg: "1rem 2rem",
-                },
+                cursor: "pointer",
               }}
             >
-              <Container
+              <CardMedia
+                component="img"
+                image={item.icon}
+                alt="icon"
                 sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
+                  padding: {
+                    xs: "0.75rem",
+                    sm: "1.5rem",
+                    lg: "2rem",
+                  },
+                  margin: "1rem",
+                  height: {
+                    xs: "50px",
+                  },
+                  width: {
+                    xs: "50px",
+                  },
+                  borderRadius: "5px",
+                  backgroundColor: "BobaHighlight.main",
+                }}
+              />
+              <CardContent
+                sx={{
+                  display: "inline-block",
+                  width: "100%",
+                  overflow: "hidden",
+                  whiteSpace: "nowrap",
+                  padding: {
+                    xs: "0.25rem 1rem",
+                    md: "0.50rem 1.50rem",
+                    lg: "1rem 2rem",
+                  },
                 }}
               >
-                <Typography
-                  variant="CustomHeading1"
+                <Container
                   sx={{
-                    display: "block",
-                    width: "85%",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    whiteSpace: "normal",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
                   }}
                 >
-                  {item.name}
+                  <Typography
+                    variant="CustomHeading1"
+                    sx={{
+                      display: "block",
+                      width: "85%",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      whiteSpace: "normal",
+                    }}
+                  >
+                    {item.name}
+                  </Typography>
+                  <EmotionalIntelligence fill="#F6A794" />
+                </Container>
+                <Typography
+                  variant="CustomBody"
+                  sx={{
+                    display: "block",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    maxWidth: "70%",
+                    margin: "0.25rem 0",
+                  }}
+                >
+                  {item.desc}
                 </Typography>
-                <EmotionalIntelligence fill="#F6A794" />
-              </Container>
-              <Typography
-                variant="CustomBody"
-                sx={{
-                  display: "block",
-                  overflow: "hidden",
-                  textOverflow: "ellipsis",
-                  maxWidth: "70%",
-                  margin: "0.25rem 0",
-                }}
-              >
-                {item.desc}
-              </Typography>
-              <Typography
-                variant="customBody"
-                sx={{
-                  fontWeight: "bold",
-                  paddingTop: "1rem",
-                }}
-              >
-                Read More
-              </Typography>
-            </CardContent>
-          </Card>
+                <Typography
+                  variant="customBody"
+                  sx={{
+                    fontWeight: "bold",
+                    paddingTop: "1rem",
+                  }}
+                >
+                  Read More
+                </Typography>
+              </CardContent>
+            </Card>
+          </Link>
         );
       })}
-    </Link>
+    </Fragment>
   );
 }
 
