@@ -10,14 +10,13 @@ import { ReactComponent as EmotionalIntelligence } from "../Images/icons/emotion
 import { Link } from "react-router-dom";
 
 function CustomCard({ dummyData }) {
-  const career = "education";
   return (
     <Fragment>
       {dummyData.map((item) => {
         return (
           <Link
             rel="noopener noreferrer"
-            to={`/career/${career}`}
+            to={`/career/${item.name}`}
             style={{
               textDecoration: "none",
             }}
