@@ -1,15 +1,15 @@
 import React from "react";
 import { Stack } from "@mui/material";
-import CustomCard from "./CustomCard";
+import ResultCards from "./ResultCards";
 import { MOCK_DATA } from "../constants/mockData";
 
-function ResultsCards() {
+function ResultCardsContainer() {
   return (
     <Stack spacing={3}>
-      <CustomCard dummyData={MOCK_DATA} />
+      <ResultCards cardData={MOCK_DATA} />
       <hr />
     </Stack>
   );
 }
 
-export default ResultsCards;
+export default ResultCardsContainer;

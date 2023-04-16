@@ -9,13 +9,12 @@ import {
 import { ReactComponent as EmotionalIntelligence } from "../Images/icons/emotional_intelligence.svg";
 import { Link } from "react-router-dom";
 
-function CustomCard({ dummyData }) {
+function ResultCards({ cardData }) {
   return (
     <Fragment>
-      {dummyData.map((item) => {
+      {cardData.map((item) => {
         return (
           <Link
-            rel="noopener noreferrer"
             to={`/career/${item.name}`}
             style={{
               textDecoration: "none",
@@ -38,7 +37,7 @@ function CustomCard({ dummyData }) {
             >
               <CardMedia
                 component="img"
-                image={item.icon}
+                src={item.icon}
                 alt="icon"
                 sx={{
                   padding: {
@@ -121,4 +120,4 @@ function CustomCard({ dummyData }) {
   );
 }
 
-export default CustomCard;
+export default ResultCards;

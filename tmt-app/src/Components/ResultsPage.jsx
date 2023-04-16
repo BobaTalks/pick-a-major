@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { FlexContainer } from "../Styling/CustomStyling.js";
-import ResultsCards from "./ResultsCards.jsx";
+import ResultCardsContainer from "./ResultCardsContainer.jsx";
 
 function ResultsPage() {
   return (
@@ -57,7 +57,7 @@ function ResultsPage() {
             Your results are lost once you leave this page.
           </Typography>
         </FlexContainer>
-        <ResultsCards />
+        <ResultCardsContainer />
       </Grid>
     </Grid>
   );
