@@ -3,7 +3,7 @@ import { Container, Grid } from "@mui/material";
 import QuestionCard from "./QuestionCard";
 import { CAREERS_CARDS_PLACEHOLDERS } from "../constants/careerMajorList";
 
-function Questions() {
+function Quiz() {
   return (
     <Container>
       <Grid container justifyContent="center">
@@ -17,4 +17,4 @@ function Questions() {
   );
 }
 
-export default Questions;
+export default Quiz;
