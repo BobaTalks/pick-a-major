@@ -136,8 +136,6 @@ function Home() {
           <Link
             sx={{ color: "Boba.main" }}
             underline="none"
-            target="_blank"
-            rel="noopener noreferrer"
             aria-label="Learn more about other different majors"
             component={RouterLink}
             to="/questions/classes"
