@@ -6,6 +6,9 @@ import { ThemeProvider } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import CareerGuide from "./Components/CareerGuide";
 import Quiz from "./Components/Quiz";
+import Results from "./Components/Results";
+import Receipt from "./Components/Receipt";
+import Majors from "./Components/Majors";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,18 @@ const router = createBrowserRouter([
   {
     path: "/quiz/:step",
     element: <Quiz />,
+  },
+  {
+    path: "/results",
+    element: <Results />,
+  },
+  {
+    path: "/receipt",
+    element: <Receipt />,
+  },
+  {
+    path: "/majors",
+    element: <Majors />,
   },
 ]);
 
