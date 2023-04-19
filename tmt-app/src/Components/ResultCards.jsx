@@ -77,7 +77,7 @@ function ResultCards({ cardData }) {
                   }}
                 >
                   <Typography
-                    variant="CustomHeading1"
+                    variant="h2"
                     sx={{
                       display: "block",
                       width: "85%",
@@ -91,7 +91,7 @@ function ResultCards({ cardData }) {
                   <EmotionalIntelligence fill="#F6A794" />
                 </Container>
                 <Typography
-                  variant="CustomBody"
+                  variant="h6"
                   sx={{
                     display: "block",
                     overflow: "hidden",
@@ -103,7 +103,7 @@ function ResultCards({ cardData }) {
                   {item.desc}
                 </Typography>
                 <Typography
-                  variant="customBody"
+                  variant="h6"
                   sx={{
                     fontWeight: "bold",
                     paddingTop: "1rem",

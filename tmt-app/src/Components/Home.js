@@ -49,7 +49,7 @@ function Home() {
         </Container>
         <FlexContainer sx={{ flexDirection: "column", position: "none" }}>
           <Container sx={{ textAlign: "center", paddingBottom: "1.5rem" }}>
-            <Typography variant="CustomTitle" sx={{ color: "Boba.main" }}>
+            <Typography variant="h1" sx={{ color: "Boba.main" }}>
               Can&apos;t decide between majoring in business, biology, or art?
             </Typography>
           </Container>
@@ -57,7 +57,7 @@ function Home() {
             sx={{ textAlign: "center", marginY: "1.75rem" }}
             maxWidth="md"
           >
-            <Typography variant="CustomHeading3">
+            <Typography variant="h4">
               No one can master multiple subjects the way you do. Spend 2
               minutes with us to find the perfect major for you!
             </Typography>
@@ -133,7 +133,7 @@ function Home() {
           }}
         >
           <PrimaryBtn sx={{ color: "#FFFFFF" }}>
-            <Typography variant="CustomHeading2">Take the Quiz</Typography>
+            <Typography variant="h3">Take the Quiz</Typography>
           </PrimaryBtn>
 
           <FlexContainer sx={{ marginTop: "4.5rem", flexDirection: "column" }}>
@@ -144,9 +144,7 @@ function Home() {
                 textDecoration: "underline",
               }}
             >
-              <Typography variant="CustomSubHeading">
-                See all Majors/Careers
-              </Typography>
+              <Typography variant="h5">See all Majors/Careers</Typography>
               <ArrowDownwardIcon
                 sx={{ paddingTop: "3px", paddingLeft: "10px" }}
               />
@@ -168,7 +166,7 @@ function Home() {
         }}
         ref={scrollToList}
       >
-        <Typography display="block" variant="CustomHeading3">
+        <Typography display="block" variant="h4">
           All Majors & Careers
         </Typography>
         <FlexContainer

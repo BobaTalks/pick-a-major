@@ -43,9 +43,9 @@ function ResultsPage() {
             },
           }}
         >
-          <Typography variant="CustomHeading1">Results</Typography>
+          <Typography variant="h2">Results</Typography>
           <Typography
-            variant="CustomSubHeading"
+            variant="h5"
             sx={{
               marginLeft: {
                 xs: "0",
