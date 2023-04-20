@@ -8,8 +8,15 @@ import {
 } from "@mui/material";
 import { ReactComponent as EmotionalIntelligence } from "../Images/icons/emotional_intelligence.svg";
 import { Link } from "react-router-dom";
+import TopicIcon from "../constants/SpriteSheet.svg";
 
 function ResultCards({ cardData }) {
+  const IconSvg = ({ topic, size }) => (
+    <svg fill="white" width={size} height={size}>
+      <use href={`${TopicIcon}#icon-${topic}`} />
+    </svg>
+  );
+
   return (
     <Fragment>
       {cardData.map((item) => {
@@ -36,8 +43,6 @@ function ResultCards({ cardData }) {
               }}
             >
               <CardMedia
-                component="img"
-                src={item.icon}
                 alt="icon"
                 sx={{
                   padding: {
@@ -55,7 +60,9 @@ function ResultCards({ cardData }) {
                   borderRadius: "5px",
                   backgroundColor: "BobaHighlight.main",
                 }}
-              />
+              >
+                <IconSvg topic={item.icon} size={"48"} />
+              </CardMedia>
               <CardContent
                 sx={{
                   display: "inline-block",
