@@ -8,9 +8,7 @@ import ResultsPage from "./Components/ResultsPage";
 import CareerPage from "./Components/CareerPage";
 import MajorPage from "./Components/MajorPage";
 import Quiz from "./Components/Quiz";
-import Results from "./Components/Results";
 import Receipt from "./Components/Receipt";
-import Majors from "./Components/Majors";
 
 const router = createBrowserRouter([
   {
