@@ -21,7 +21,7 @@ function Home() {
       sx={{
         minWidth: "100%",
         minHeight: "100vh",
-        overflowX: {
+        overflow: {
           xs: "hidden",
         },
       }}

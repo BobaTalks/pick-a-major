@@ -5,7 +5,16 @@ import { Box, Typography } from "@mui/material";
 function GuideSidebar({ toggleButton }) {
   return (
     <FlexContainer sx={{ flexDirection: "column" }}>
-      <Box sx={{ width: "60%", textAlign: "center" }}>
+      <Box
+        sx={{
+          width: {
+            xs: "175px",
+            sm: "225px",
+            xl: "275px",
+          },
+          textAlign: "center",
+        }}
+      >
         <Box>
           <Typography variant="h1">Major Guide</Typography>
         </Box>
@@ -17,9 +26,15 @@ function GuideSidebar({ toggleButton }) {
         disabled={toggleButton}
         sx={{
           backgroundColor: toggleButton ? "InactiveGrey2.main" : "Matcha.main",
+          "&.MuiButtonBase-root": {
+            padding: {
+              xs: "1rem 2.5rem",
+              xl: "1rem 3.25rem",
+            },
+          },
         }}
       >
-        <Typography variant="h3">Take the Quiz</Typography>
+        <Typography variant="h4">Take the Quiz</Typography>
       </PrimaryBtn>
     </FlexContainer>
   );
