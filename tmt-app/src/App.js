@@ -4,8 +4,11 @@ import Home from "./Components/Home";
 import { CustomTheme } from "./Styling/CustomStyling.js";
 import { ThemeProvider } from "@mui/material";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import CareerGuide from "./Components/CareerGuide";
-import Questions from "./Components/Questions";
+import ResultsPage from "./Components/ResultsPage";
+import CareerPage from "./Components/CareerPage";
+import MajorPage from "./Components/MajorPage";
+import Quiz from "./Components/Quiz";
+import Receipt from "./Components/Receipt";
 
 const router = createBrowserRouter([
   {
@@ -13,12 +16,24 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/guide",
-    element: <CareerGuide />,
+    path: "/results",
+    element: <ResultsPage />,
   },
   {
-    path: "/questions/classes",
-    element: <Questions />,
+    path: "/majors",
+    element: <MajorPage />,
+  },
+  {
+    path: "/career/:career",
+    element: <CareerPage />,
+  },
+  {
+    path: "/quiz/:step",
+    element: <Quiz />,
+  },
+  {
+    path: "/receipt",
+    element: <Receipt />,
   },
 ]);
 
