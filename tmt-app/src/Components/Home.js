@@ -6,7 +6,7 @@ import LycheeRectangle from "../Images/LycheeRectangle.png";
 import MilkTeaSwiggle2 from "../Images/MilkTeaSwiggle2.png";
 import ThaiTeaSwiggle1 from "../Images/ThaiTeaSwiggle1.png";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
-import MajorCareerList from "./MajorCareerList.js";
+import MajorCareerList from "./MajorCareerList.jsx";
 import GuideSidebar from "./GuideSidebar.js";
 import { Link as RouterLink } from "react-router-dom";
 
