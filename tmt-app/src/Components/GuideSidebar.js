@@ -1,6 +1,7 @@
 import React from "react";
 import { FlexContainer, PrimaryBtn } from "../Styling/CustomStyling.js";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Link } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 
 function GuideSidebar({ toggleButton }) {
   return (
@@ -22,20 +23,30 @@ function GuideSidebar({ toggleButton }) {
           <Typography variant="h3">Explore majors, careers, & more</Typography>
         </Box>
       </Box>
-      <PrimaryBtn
-        disabled={toggleButton}
-        sx={{
-          backgroundColor: toggleButton ? "InactiveGrey2.main" : "Matcha.main",
-          "&.MuiButtonBase-root": {
-            padding: {
-              xs: "1rem 2.5rem",
-              xl: "1rem 3.25rem",
-            },
-          },
-        }}
+      <Link
+        sx={{ color: "Boba.main" }}
+        underline="none"
+        aria-label="Learn more about other different majors"
+        component={RouterLink}
+        to="/quiz/1"
       >
-        <Typography variant="h4">Take the Quiz</Typography>
-      </PrimaryBtn>
+        <PrimaryBtn
+          disabled={toggleButton}
+          sx={{
+            backgroundColor: toggleButton
+              ? "InactiveGrey2.main"
+              : "Matcha.main",
+            "&.MuiButtonBase-root": {
+              padding: {
+                xs: "1rem 2.5rem",
+                xl: "1rem 3.25rem",
+              },
+            },
+          }}
+        >
+          <Typography variant="h4">Take the Quiz</Typography>
+        </PrimaryBtn>
+      </Link>
     </FlexContainer>
   );
 }

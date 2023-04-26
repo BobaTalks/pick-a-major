@@ -21,7 +21,7 @@ function Home() {
       sx={{
         minWidth: "100%",
         minHeight: "100vh",
-        overflow: {
+        overflowX: {
           xs: "hidden",
         },
       }}
@@ -171,7 +171,6 @@ function Home() {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "flex-start",
-          height: "85vh",
         }}
         ref={scrollToList}
       >
