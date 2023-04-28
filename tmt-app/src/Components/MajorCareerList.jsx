@@ -1,7 +1,7 @@
 import { React, Fragment } from "react";
-import { FlexContainer } from "../Styling/CustomStyling.js";
+import { FlexContainer } from "../Styling/CustomStyling";
 import { Box, Typography, Link } from "@mui/material";
-import { CAREERS_LIST, MAJORS_LIST } from "../constants/careerMajorList.js";
+import { CAREERS_LIST, MAJORS_LIST } from "../constants/careerMajorList";
 import { Link as RouterLink } from "react-router-dom";
 
 function MajorCareerList() {
@@ -31,7 +31,7 @@ function MajorCareerList() {
                 component={RouterLink}
                 sx={{
                   color: "Boba.main",
-                  textDecoration: "none",
+                  textDecoration: "underline",
                   "&:hover": {
                     color: "RedBean.main",
                     fontWeight: "bold",
@@ -69,7 +69,7 @@ function MajorCareerList() {
                 component={RouterLink}
                 sx={{
                   color: "Boba.main",
-                  textDecoration: "none",
+                  textDecoration: "underline",
                   "&:hover": {
                     color: "RedBean.main",
                     fontWeight: "bold",
