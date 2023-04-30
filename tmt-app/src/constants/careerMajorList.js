@@ -6,7 +6,7 @@ export const CAREERS_LIST = [
     name: "Accounting/Finance",
     desc: "Accounting is the process of recording, classifying, and summarizing financial transactions to provide information that is useful in making business decisions. Finance is the study of how individuals and organizations manage their money, including the processes of acquiring and using financial resources over time. Accountants and financial professionals use tools such as financial statements and spreadsheets to analyze and interpret financial data, and they may also be involved in forecasting and budgeting, risk management, and decision-making",
     link: "https://www.zippia.com/accountant-jobs/",
-    key: "account_finance",
+    key: "account-finance",
   },
   {
     id: 1,
@@ -27,7 +27,7 @@ export const CAREERS_LIST = [
     name: "Data Science",
     desc: "Data science is the field that deals with the collection, analysis, and interpretation of large datasets. It involves using statistical and computational techniques to extract insights and knowledge from data, and applying this knowledge to solve real-world problems. Data scientists often use tools such as machine learning algorithms and programming languages like Python to analyze and interpret data",
     link: "https://www.zippia.com/data-scientist-jobs/",
-    key: "data_science",
+    key: "data-science",
   },
   {
     id: 4,
@@ -48,14 +48,14 @@ export const CAREERS_LIST = [
     name: "Engineering (non-software)",
     desc: "Engineering is the application of scientific, economic, and practical knowledge in order to design, build, and maintain structures, machines, devices, systems, and processes. Engineers use math and science to solve problems and improve the world around us through the design and development of new technologies and products",
     link: "https://www.zippia.com/engineer-jobs/",
-    key: "engineering_non_software",
+    key: "engineering-non-software",
   },
   {
     id: 7,
     name: "Healthcare Professional",
     desc: "Being a healthcare professional involves providing medical care and treatment to patients, often in a clinical setting such as a hospital or doctor's office. Healthcare professionals may work in a variety of roles, including doctors, nurses, and other specialized positions, and may be responsible for diagnosing and treating illnesses, administering medication, and providing preventive care and education to patients. Healthcare professionals also play an important role in advocating for the health and well-being of their patients and may be involved in research and education to advance the field of medicine",
     link: "https://www.zippia.com/health-care-provider-jobs/",
-    key: "healthcare_professional",
+    key: "healthcare-professional",
   },
   {
     id: 8,
@@ -69,14 +69,14 @@ export const CAREERS_LIST = [
     name: "Investment Banking",
     desc: "Investment banking is the division of a bank that helps clients raise capital by underwriting and issuing securities, as well as providing financial advisory services. Investment bankers work with companies, governments, and other organizations to raise the necessary capital to fund their operations, expand their businesses, or complete mergers and acquisitions. Investment bankers may also be involved in trading securities, structuring financial deals, and providing market insights and analysis to clients",
     link: "https://www.zippia.com/investment-banker-jobs/",
-    key: "investment_banking",
+    key: "investment-banking",
   },
   {
     id: 10,
     name: "Law/Legal",
     desc: "Law is the system of rules and principles that a society or government recognizes and enforces through its courts and other institutions. The legal profession involves the study, interpretation, and application of these laws, as well as the representation of clients in legal matters such as litigation, contracts, and negotiations. Lawyers may work in private practice, for a government agency, or in-house for a corporation or other organization, and may specialize in areas such as criminal law, corporate law, or intellectual property law",
     link: "https://www.zippia.com/lawyer-jobs/",
-    key: "law_legal",
+    key: "law-legal",
   },
   {
     id: 11,
@@ -90,14 +90,14 @@ export const CAREERS_LIST = [
     name: "Product Management",
     desc: "Product management is the process of defining, developing, and bringing a product to market. It involves working with a team of designers, engineers, and other stakeholders to identify the needs of the target audience, develop a product roadmap, and create a plan to bring the product to market. Product managers are responsible for overseeing the entire product lifecycle, from conception to launch and beyond, and for making strategic decisions about the direction of the product",
     link: "https://www.zippia.com/product-manager-jobs/demographics/",
-    key: "product_management",
+    key: "product-management",
   },
   {
     id: 13,
     name: "Project/Program Management",
     desc: "Project management is the process of planning, organizing, and overseeing the work of a team to achieve specific goals and meet deadlines. It involves establishing a project plan, identifying and acquiring the necessary resources, and managing the budget, scope, and risks of the project. Project managers are responsible for ensuring that the project stays on track and is completed successfully",
     link: "https://www.zippia.com/program-manager-jobs/",
-    key: "project_program_management",
+    key: "project-program-management",
   },
   {
     id: 14,
@@ -111,7 +111,7 @@ export const CAREERS_LIST = [
     name: "Software Engineering",
     desc: "A software engineer is responsible for designing, developing, and maintaining software systems. This involves working with a team to identify the needs of the users, writing and testing code, and ensuring that the software is efficient, reliable, and easy to use. Software engineers may also be involved in the ongoing maintenance and improvement of existing software systems",
     link: "https://www.zippia.com/software-engineer-jobs/",
-    key: "software_engineering",
+    key: "software-engineering",
   },
 ];
 
@@ -128,7 +128,7 @@ export const MAJORS_LIST = [
       "Gene Expression",
     ],
     skills: ["Technical Communication", "Research", "Data Analysis"],
-    key: "biology_and_health",
+    key: "biology-and-health",
   },
   {
     id: 1,
@@ -150,7 +150,7 @@ export const MAJORS_LIST = [
       "Software Development",
       "Cloud Skills",
     ],
-    key: "computer_science_and_math",
+    key: "computer-science-and-math",
   },
   {
     id: 2,
@@ -163,7 +163,7 @@ export const MAJORS_LIST = [
       "Customer Empathy",
       "Presentation Skills",
     ],
-    key: "economics_and_business",
+    key: "economics-and-business",
   },
   {
     id: 3,
@@ -183,7 +183,7 @@ export const MAJORS_LIST = [
     desc: "Humanities is a broad field that encompasses the study of language, literature, art, music, history, philosophy, and other cultural practices and products. Culture majors focus on the study of the ways in which people from different societies and communities create, share, and transmit their traditions, beliefs, and values",
     classes: ["Food in Culture", "Comparative Literature", "Race Theory"],
     skills: ["Critical Thinking", "Written Communication", "Empathy"],
-    key: "humanities_and_cultures",
+    key: "humanities-and-cultures",
   },
   {
     id: 5,
@@ -208,7 +208,7 @@ export const MAJORS_LIST = [
       "Entertainment Engineering & Management",
     ],
     skills: ["Public Speaking", "Creativity"],
-    key: "performing_arts",
+    key: "performing-arts",
   },
   {
     id: 7,
@@ -224,7 +224,7 @@ export const MAJORS_LIST = [
       "research and data analysis",
       "Mathematical/Logical Reasoning",
     ],
-    key: "physical_science_and_engineering",
+    key: "physical-science-and-engineering",
   },
   {
     id: 8,
@@ -241,7 +241,7 @@ export const MAJORS_LIST = [
       "Research Methods",
       "Statistical and Computing Techniques",
     ],
-    key: "psychology_and_neuroscience",
+    key: "psychology-and-neuroscience",
   },
   {
     id: 9,
@@ -257,7 +257,7 @@ export const MAJORS_LIST = [
       "Critical Thinking",
       "Presentation/Public Skills",
     ],
-    key: "social_and_political_science",
+    key: "social-and-political-science",
   },
   {
     id: 10,
@@ -269,7 +269,7 @@ export const MAJORS_LIST = [
       "Sculpture/Drawing/Painting",
     ],
     skills: ["Creativity", "Empathy", "Computer software skills"],
-    key: "visual_arts_and_design",
+    key: "visual-arts-and-design",
   },
 ];
 
