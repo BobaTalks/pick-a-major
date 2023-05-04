@@ -1,7 +1,7 @@
 import { React, Fragment } from "react";
 import { FlexContainer } from "../Styling/CustomStyling";
 import { Box, Typography, Link } from "@mui/material";
-import { CAREERS_LIST, MAJORS_LIST } from "../constants/careerMajorList";
+import { CAREERS_LIST, MAJORS_LIST } from "../constants/constants";
 import { Link as RouterLink } from "react-router-dom";
 
 function MajorCareerList() {
@@ -19,15 +19,15 @@ function MajorCareerList() {
           Majors
         </Typography>
         <Fragment>
-          {Object.entries(MAJORS_LIST).map((item) => (
+          {Object.values(MAJORS_LIST).map((item) => (
             <div
-              key={item[1].id}
+              key={item.id}
               style={{
                 padding: "0.25rem 0",
               }}
             >
               <Link
-                to={`/majors/${item[1].key}`}
+                to={`/majors/${item.key}`}
                 component={RouterLink}
                 sx={{
                   color: "Boba.main",
@@ -38,7 +38,7 @@ function MajorCareerList() {
                   },
                   "&::after": {
                     display: "block",
-                    content: `"${item[1].name}"`,
+                    content: `"${item.name}"`,
                     fontWeight: "bold",
                     height: "0px",
                     overflow: "hidden",
@@ -46,7 +46,7 @@ function MajorCareerList() {
                   },
                 }}
               >
-                {item[1].name}
+                {item.name}
               </Link>
             </div>
           ))}
