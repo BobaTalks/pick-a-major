@@ -19,15 +19,15 @@ function MajorCareerList() {
           Majors
         </Typography>
         <Fragment>
-          {MAJORS_LIST.map((item) => (
+          {Object.entries(MAJORS_LIST).map((item) => (
             <div
-              key={item.id}
+              key={item[1].id}
               style={{
                 padding: "0.25rem 0",
               }}
             >
               <Link
-                to={`/majors/${item.key}`}
+                to={`/majors/${item[1].key}`}
                 component={RouterLink}
                 sx={{
                   color: "Boba.main",
@@ -38,7 +38,7 @@ function MajorCareerList() {
                   },
                   "&::after": {
                     display: "block",
-                    content: `"${item.name}"`,
+                    content: `"${item[1].name}"`,
                     fontWeight: "bold",
                     height: "0px",
                     overflow: "hidden",
@@ -46,7 +46,7 @@ function MajorCareerList() {
                   },
                 }}
               >
-                {item.name}
+                {item[1].name}
               </Link>
             </div>
           ))}

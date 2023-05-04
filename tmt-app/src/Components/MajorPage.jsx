@@ -1,25 +1,17 @@
 import { Container, Typography } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { MAJORS_LIST } from "../constants/careerMajorList";
 
 function MajorPage() {
   const params = useParams();
-  const [data, setData] = useState([]);
+  let data = [];
 
   const searchData = (target) => {
-    for (let i = 0; i < MAJORS_LIST.length; i++) {
-      if (target === MAJORS_LIST[i].key) {
-        setData(MAJORS_LIST[i]);
-        console.log(MAJORS_LIST[i]);
-      }
-    }
+    data = MAJORS_LIST[`"${target}"`];
   };
 
-  useEffect(() => {
-    searchData(params.major);
-  }, [params]);
-
+  searchData(params.major);
   return (
     <Container>
       <Typography
