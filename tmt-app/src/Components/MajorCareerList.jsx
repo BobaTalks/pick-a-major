@@ -1,7 +1,7 @@
 import { React, Fragment } from "react";
 import { FlexContainer } from "../Styling/CustomStyling";
 import { Box, Typography, Link } from "@mui/material";
-import { CAREERS_LIST, MAJORS_LIST } from "../constants/constants";
+import { CAREERS_LIST, MAJORS_LIST } from "../utils/constants";
 import { Link as RouterLink } from "react-router-dom";
 
 function MajorCareerList() {

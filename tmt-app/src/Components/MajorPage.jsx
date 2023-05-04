@@ -1,7 +1,7 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
-import { MAJORS_LIST } from "../constants/constants";
+import { MAJORS_LIST } from "../utils/constants";
 
 function MajorPage() {
   const params = useParams();

@@ -7,7 +7,7 @@ import BobaBot from "./BobaBot";
 import {
   CAREERS_CARDS_PLACEHOLDERS,
   SOFT_SKILL_LIST,
-} from "../constants/constants";
+} from "../utils/constants";
 
 function Quiz() {
   const { step } = useParams();
