@@ -2,7 +2,7 @@ import { Container, Typography } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import { MAJORS_LIST } from "../utils/constants";
-
+import Breadcrumb from "./Breadcrumb";
 function MajorPage() {
   const params = useParams();
   let data = [];
@@ -13,11 +13,12 @@ function MajorPage() {
 
   searchData(params.major);
   return (
-    <Container>
+    <Container sx={{ minWidth: "70%" }}>
+      <Breadcrumb text={data.name} page="Major" />
       <Typography
         variant="h1"
         sx={{
-          margin: "0 auto",
+          margin: "2rem auto",
           textAlign: "center",
         }}
       >
