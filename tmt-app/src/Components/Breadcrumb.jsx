@@ -1,8 +1,9 @@
 import React from "react";
 import { Breadcrumbs, Typography } from "@mui/material";
 import ForwardArrow from "../Images/Forward.png";
+import { Link } from "react-router-dom";
 
-function Breadcrumb({ text, page }) {
+function Breadcrumb({ text, page, previousPage }) {
   return (
     <Breadcrumbs
       separator={
@@ -23,19 +24,21 @@ function Breadcrumb({ text, page }) {
         },
       }}
     >
-      <Typography
-        variant="h6"
-        sx={{
-          color: "BobaHighlight.main",
-          marginRight: {
-            xs: "0px",
-            sm: "8px",
-            md: "16px",
-          },
-        }}
-      >
-        All Careers & Majors
-      </Typography>
+      <Link to={`/${previousPage}`} style={{ textDecoration: "none" }}>
+        <Typography
+          variant="h6"
+          sx={{
+            color: "BobaHighlight.main",
+            marginRight: {
+              xs: "0px",
+              sm: "8px",
+              md: "16px",
+            },
+          }}
+        >
+          All Careers & Majors
+        </Typography>
+      </Link>
       <Typography
         variant="h6"
         sx={{

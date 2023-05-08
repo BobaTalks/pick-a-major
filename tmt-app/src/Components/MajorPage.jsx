@@ -14,7 +14,7 @@ function MajorPage() {
   searchData(params.major);
   return (
     <Container sx={{ minWidth: "70%" }}>
-      <Breadcrumb text={data.name} page="Major" />
+      <Breadcrumb text={data.name} page="Major" previousPage="" />
       <Typography
         variant="h1"
         sx={{
