@@ -4,9 +4,10 @@ import ForwardArrow from "../Images/Forward.png";
 import { Link } from "react-router-dom";
 
 function Breadcrumb({ previousPage }) {
+  const [category, major, parent, path] = previousPage;
   const breadcrumbs = [
-    { url: `/${previousPage.path}`, label: `${previousPage.parent}` },
-    { label: `${previousPage.major} (${previousPage.category})` },
+    { url: `/${path}`, label: `${parent}` },
+    { label: `${major} (${category})` },
   ];
 
   return (
@@ -26,9 +27,10 @@ function Breadcrumb({ previousPage }) {
         },
       }}
     >
-      {breadcrumbs.map((breadcrumb) => {
+      {breadcrumbs.map((breadcrumb, idx) => {
         return breadcrumb?.url ? (
           <Typography
+            key={idx}
             component={Link}
             to={breadcrumb.url}
             variant="h6"
@@ -46,6 +48,7 @@ function Breadcrumb({ previousPage }) {
           </Typography>
         ) : (
           <Typography
+            key={idx}
             variant="h6"
             sx={{
               color: "BobaHighlight.main",
