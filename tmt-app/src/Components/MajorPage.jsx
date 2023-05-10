@@ -14,7 +14,14 @@ function MajorPage() {
   searchData(params.major);
   return (
     <Container sx={{ minWidth: "70%" }}>
-      <Breadcrumb text={data.name} page="Major" previousPage="" />
+      <Breadcrumb
+        previousPage={{
+          category: "Major",
+          major: data.name,
+          parent: "Home",
+          path: "",
+        }}
+      />
       <Typography
         variant="h1"
         sx={{

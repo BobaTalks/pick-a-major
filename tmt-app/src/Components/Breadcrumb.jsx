@@ -3,7 +3,12 @@ import { Breadcrumbs, Typography } from "@mui/material";
 import ForwardArrow from "../Images/Forward.png";
 import { Link } from "react-router-dom";
 
-function Breadcrumb({ text, page, previousPage }) {
+function Breadcrumb({ previousPage }) {
+  const breadcrumbs = [
+    { url: `/${previousPage.path}`, label: `${previousPage.parent}` },
+    { label: `${previousPage.major} (${previousPage.category})` },
+  ];
+
   return (
     <Breadcrumbs
       separator={
@@ -15,43 +20,46 @@ function Breadcrumb({ text, page, previousPage }) {
       }
       aria-label="breadcrumb"
       sx={{
-        display: "flex",
-        alignItems: "center",
-        textAlign: "center",
         marginX: {
           xs: "1rem",
           md: "4rem",
         },
       }}
     >
-      <Link to={`/${previousPage}`} style={{ textDecoration: "none" }}>
-        <Typography
-          variant="h6"
-          sx={{
-            color: "BobaHighlight.main",
-            marginRight: {
-              xs: "0px",
-              sm: "8px",
-              md: "16px",
-            },
-          }}
-        >
-          All Careers & Majors
-        </Typography>
-      </Link>
-      <Typography
-        variant="h6"
-        sx={{
-          color: "BobaHighlight.main",
-          marginLeft: {
-            xs: "0px",
-            sm: "8px",
-            md: "16px",
-          },
-        }}
-      >
-        {text} ({page})
-      </Typography>
+      {breadcrumbs.map((breadcrumb) => {
+        return breadcrumb?.url ? (
+          <Typography
+            component={Link}
+            to={breadcrumb.url}
+            variant="h6"
+            sx={{
+              color: "BobaHighlight.main",
+              marginRight: {
+                xs: "0px",
+                sm: "8px",
+                md: "16px",
+              },
+              textDecoration: "none",
+            }}
+          >
+            {breadcrumb.label}
+          </Typography>
+        ) : (
+          <Typography
+            variant="h6"
+            sx={{
+              color: "BobaHighlight.main",
+              marginLeft: {
+                xs: "0px",
+                sm: "8px",
+                md: "16px",
+              },
+            }}
+          >
+            {breadcrumb.label}
+          </Typography>
+        );
+      })}
     </Breadcrumbs>
   );
 }
