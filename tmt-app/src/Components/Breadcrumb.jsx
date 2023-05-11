@@ -3,13 +3,7 @@ import { Breadcrumbs, Typography } from "@mui/material";
 import ForwardArrow from "../Images/Forward.png";
 import { Link } from "react-router-dom";
 
-function Breadcrumb({ previousPage }) {
-  const [category, major, parent, path] = previousPage;
-  const breadcrumbs = [
-    { url: `/${path}`, label: `${parent}` },
-    { label: `${major} (${category})` },
-  ];
-
+function Breadcrumb({ breadcrumbs }) {
   return (
     <Breadcrumbs
       separator={
@@ -27,10 +21,10 @@ function Breadcrumb({ previousPage }) {
         },
       }}
     >
-      {breadcrumbs.map((breadcrumb, idx) => {
+      {breadcrumbs.map((breadcrumb, index) => {
         return breadcrumb?.url ? (
           <Typography
-            key={idx}
+            key={index}
             component={Link}
             to={breadcrumb.url}
             variant="h6"
@@ -48,7 +42,7 @@ function Breadcrumb({ previousPage }) {
           </Typography>
         ) : (
           <Typography
-            key={idx}
+            key={index}
             variant="h6"
             sx={{
               color: "BobaHighlight.main",
