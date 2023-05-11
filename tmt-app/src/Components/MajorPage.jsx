@@ -34,7 +34,7 @@ function MajorPage() {
         <Grid item>
           <Box
             sx={{
-              backgroundColor: "#F3E8DE",
+              backgroundColor: "Beige.main",
               borderRadius: "36px",
               padding: "2.25rem",
               margin: {
@@ -42,7 +42,6 @@ function MajorPage() {
                 sm: "1.25rem",
                 md: "1.75rem",
               },
-              flexBasis: "30%",
             }}
           >
             <Typography variant="h3" sx={{ paddingBottom: "1.5rem" }}>

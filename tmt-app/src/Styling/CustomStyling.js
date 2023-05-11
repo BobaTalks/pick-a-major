@@ -33,6 +33,18 @@ export const CustomTheme = createTheme({
     Boba: {
       main: "#1B1D2E",
     },
+    Beige: {
+      main: "#F3E8DE",
+    },
+    Pink: {
+      main: "#F4D7D7",
+    },
+    Lavender: {
+      main: "#F6F1FF",
+    },
+    Avacado: {
+      main: "#F0F6E2",
+    },
   },
   typography: {
     h1: {
