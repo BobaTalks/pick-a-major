@@ -34,7 +34,7 @@ function MajorPage() {
         <Grid item>
           <Box
             sx={{
-              backgroundColor: "#00FF00",
+              backgroundColor: "BobaBeige.main",
               borderRadius: "36px",
               padding: "2.25rem",
               margin: {

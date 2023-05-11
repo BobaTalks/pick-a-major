@@ -33,10 +33,10 @@ export const CustomTheme = createTheme({
     Boba: {
       main: "#1B1D2E",
     },
-    Beige: {
+    BobaBeige: {
       main: "#F3E8DE",
     },
-    Pink: {
+    BobaPink: {
       main: "#F4D7D7",
     },
     Lavender: {
