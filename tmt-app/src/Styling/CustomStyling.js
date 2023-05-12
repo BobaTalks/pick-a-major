@@ -1,4 +1,4 @@
-import { styled, Button, Container, createTheme } from "@mui/material";
+import { styled, Button, Container, createTheme, Card } from "@mui/material";
 import { createBreakpoints } from "@mui/system";
 import "@fontsource/poppins";
 
@@ -141,7 +141,7 @@ export const CustomTheme = createTheme({
         fontSize: "16px",
       },
     },
-    CustomOverline: {
+    body: {
       fontFamily: "Poppins",
       fontWeight: 400,
       fontSize: "16px",
@@ -208,4 +208,20 @@ export const FlexContainer = styled(Container)({
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
+});
+
+export const DetailCard = styled(Card)({
+  backgroundColor: "#F3E8DE",
+  borderRadius: "36px",
+  padding: "2.25rem",
+  boxShadow: "none",
+  [breakpoints.up("xs")]: {
+    margin: "0.75rem",
+  },
+  [breakpoints.up("sm")]: {
+    margin: "1.25rem",
+  },
+  [breakpoints.up("md")]: {
+    margin: "1.75rem",
+  },
 });
