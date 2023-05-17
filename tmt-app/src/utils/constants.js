@@ -128,6 +128,7 @@ export const MAJORS_LIST = {
       "Gene Expression",
     ],
     skills: ["Technical Communication", "Research", "Data Analysis"],
+    careers: ["Healthcare Professionals"],
     key: "biology-and-health",
   },
   '"computer-science-and-math"': {
@@ -150,6 +151,17 @@ export const MAJORS_LIST = {
       "Software Development",
       "Cloud Skills",
     ],
+    careers: [
+      "Software Engineering",
+      "Data Science",
+      "Product Management",
+      "Desgin",
+      "Project/Program Management",
+      "Engineering",
+      "Accounting/Finance",
+      "Investment Banking",
+      "Consultant",
+    ],
     key: "computer-science-and-math",
   },
   '"economics-and-business"': {
@@ -163,6 +175,14 @@ export const MAJORS_LIST = {
       "Customer Empathy",
       "Presentation Skills",
     ],
+    careers: [
+      "Accounting/Finance",
+      "Project/Program Management",
+      "Marketing",
+      "HR",
+      "Consultant",
+      "Law/Legal",
+    ],
     key: "economics-and-business",
   },
   '"education"': {
@@ -175,6 +195,7 @@ export const MAJORS_LIST = {
       "Social Issues in Education",
     ],
     skills: ["People Management", "Conflict Resolution"],
+    careers: ["Project/Program Management", "HR", "Recruiting", "Education"],
     key: "education",
   },
   '"humanities-and-cultures"': {
@@ -183,6 +204,14 @@ export const MAJORS_LIST = {
     desc: "Humanities is a broad field that encompasses the study of language, literature, art, music, history, philosophy, and other cultural practices and products. Culture majors focus on the study of the ways in which people from different societies and communities create, share, and transmit their traditions, beliefs, and values",
     classes: ["Food in Culture", "Comparative Literature", "Race Theory"],
     skills: ["Critical Thinking", "Written Communication", "Empathy"],
+    careers: [
+      "HR",
+      "Marketing",
+      "Healthcare Professionals",
+      "Project/Program Management",
+      "Recruiting",
+      "Education",
+    ],
     key: "humanities-and-cultures",
   },
   '"languages"': {
@@ -195,6 +224,7 @@ export const MAJORS_LIST = {
       "Linguistics",
     ],
     skills: ["Critical Thinking", "Written Communication", "Empathy"],
+    careers: ["Marketing", "Recruiting", "Law/Legal"],
     key: "languages",
   },
   '"performing-arts"': {
@@ -208,6 +238,7 @@ export const MAJORS_LIST = {
       "Entertainment Engineering & Management",
     ],
     skills: ["Public Speaking", "Creativity"],
+    careers: ["Design", "Recruiting"],
     key: "performing-arts",
   },
   '"physical-science-and-engineering"': {
@@ -223,6 +254,15 @@ export const MAJORS_LIST = {
       "Problem solving",
       "research and data analysis",
       "Mathematical/Logical Reasoning",
+    ],
+    careers: [
+      "Engineering",
+      "Software Engineering",
+      "Product Management",
+      "Project/Program Management",
+      "Investment Banking",
+      "Consultant",
+      "Law/Legal",
     ],
     key: "physical-science-and-engineering",
   },
@@ -241,6 +281,14 @@ export const MAJORS_LIST = {
       "Research Methods",
       "Statistical and Computing Techniques",
     ],
+    careers: [
+      "Design",
+      "HR",
+      "Healthcare Professional",
+      "Project/Program Management",
+      "Marketing",
+      "Recruiting",
+    ],
     key: "psychology-and-neuroscience",
   },
   '"social-and-political-science"': {
@@ -257,6 +305,7 @@ export const MAJORS_LIST = {
       "Critical Thinking",
       "Presentation/Public Skills",
     ],
+    careers: ["HR", "Law/Legal", "Recruiting", "Marketing", "Law/Legal"],
     key: "social-and-political-science",
   },
   '"visual-arts-and-design"': {
@@ -269,6 +318,7 @@ export const MAJORS_LIST = {
       "Sculpture/Drawing/Painting",
     ],
     skills: ["Creativity", "Empathy", "Computer software skills"],
+    careers: ["Design", "Art", "Product Management"],
     key: "visual-arts-and-design",
   },
 };
