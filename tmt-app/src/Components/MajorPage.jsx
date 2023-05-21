@@ -13,7 +13,7 @@ import Breadcrumb from "./Breadcrumb";
 
 function MajorPage() {
   const params = useParams();
-  let data = MAJORS_LIST[`"${params.major}"`];
+  const data = MAJORS_LIST[`"${params.major}"`];
 
   let sectionInfo = [
     {
