@@ -12,13 +12,8 @@ import { MAJORS_LIST } from "../utils/constants";
 import Breadcrumb from "./Breadcrumb";
 
 function MajorPage() {
-  const searchData = (target) => {
-    data = MAJORS_LIST[`"${target}"`];
-  };
-
   const params = useParams();
-  let data = [];
-  searchData(params.major);
+  let data = MAJORS_LIST[`"${params.major}"`];
 
   let sectionInfo = [
     {
@@ -92,7 +87,7 @@ function MajorPage() {
                       {item.info.map((item, index) => {
                         return (
                           <ListItemText
-                            key={index}
+                            key={`${item.name}-${index}`}
                             sx={{ display: "list-item" }}
                           >
                             <Typography variant="body">{item}</Typography>
