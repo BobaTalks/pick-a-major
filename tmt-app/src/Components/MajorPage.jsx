@@ -17,7 +17,7 @@ import { Link } from "@mui/material";
 function MajorPage() {
   const params = useParams();
   const data = MAJORS_LIST[params.major];
-  const resourcesLink = [
+  const resources = [
     {
       name: "BobaTalks Resource Hub",
       link: "https://bobatalks.com/resources/",
@@ -134,7 +134,7 @@ function MajorPage() {
             </Typography>
             <Typography variant="body">
               <List>
-                {resourcesLink.map((resource, index) => {
+                {resources.map((resource, index) => {
                   return (
                     <Container
                       key={`${resource.name}-${index}`}
@@ -152,12 +152,11 @@ function MajorPage() {
                         rel="noopener noreferrer"
                         target="_blank"
                         sx={{
-                          color: "black",
-                          cursor: "pointer",
+                          color: "Boba.main",
                           textDecoration: "underline",
                         }}
                       >
-                        {resource.name}
+                        <Typography variant="body">{resource.name}</Typography>
                       </Link>
                     </Container>
                   );
