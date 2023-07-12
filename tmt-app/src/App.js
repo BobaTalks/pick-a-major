@@ -10,28 +10,35 @@ import Quiz from './Components/Quiz';
 import Receipt from './Components/Receipt';
 import ResultsPage from './Components/ResultsPage';
 import { CustomTheme } from './Styling/CustomStyling.js';
+import NavBarWrapper from "./Components/NavBarWrapper";
 
 const router = createBrowserRouter([
   {
-    path: '/',
-    element: <Home />,
-  },
-  {
-    path: '/results',
-    element: <ResultsPage />,
-  },
-  {
-    path: '/:type/:typeId',
-    element: <InfoLinkPage />,
-  },
-  {
-    path: '/quiz/:step',
-    element: <Quiz />,
-  },
-  {
-    path: '/receipt',
-    element: <Receipt />,
-  },
+    path: "/",
+    element: <NavBarWrapper />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: '/results',
+        element: <ResultsPage />,
+      },
+      {
+        path: '/:type/:typeId',
+        element: <InfoLinkPage />,
+      },
+      {
+        path: '/quiz/:step',
+        element: <Quiz />,
+      },
+      {
+        path: '/receipt',
+        element: <Receipt />,
+      },
+    ]
+  }
 ]);
 
 function App() {
