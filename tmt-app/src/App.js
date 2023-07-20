@@ -10,6 +10,7 @@ import NavBarWrapper from './Components/NavBarWrapper';
 import Quiz from './Components/Quiz';
 import Receipt from './Components/Receipt';
 import ResultsPage from './Components/ResultsPage';
+import Team from './Components/Team';
 import { CustomTheme } from './Styling/CustomStyling.js';
 
 const router = createBrowserRouter([
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
       {
         path: '/receipt',
         element: <Receipt />,
+      },
+      {
+        path: '/team',
+        element: <Team />,
       },
     ],
   },

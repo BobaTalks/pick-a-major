@@ -34,7 +34,7 @@ function NavBar() {
     },
     {
       name: 'Team',
-      path: '/',
+      path: '/team',
     },
     {
       name: 'Take the Quiz',
