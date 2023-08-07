@@ -6,9 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Home from './Components/Home';
 import InfoLinkPage from './Components/InfoLinkPage';
-
 import NavBar from './Components/NavBar';
-
 import Quiz from './Components/Quiz';
 import Receipt from './Components/Receipt';
 import ResultsPage from './Components/ResultsPage';

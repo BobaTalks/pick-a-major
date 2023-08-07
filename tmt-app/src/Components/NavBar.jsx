@@ -20,7 +20,6 @@ import { Link as RouterLink } from 'react-router-dom';
 import { Outlet } from 'react-router-dom';
 
 import BTLogo from '../Images/icons/BT_Logo_1.svg';
-
 function NavBar() {
   let [navMenu, setNavMenu] = useState(false);
 
@@ -40,7 +39,6 @@ function NavBar() {
       path: '/team',
     },
   ];
-
   return (
     <>
       <AppBar
