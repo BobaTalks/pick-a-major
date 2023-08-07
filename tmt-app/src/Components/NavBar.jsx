@@ -72,7 +72,7 @@ function NavBar() {
                 anchor="right"
                 open={navMenu}
                 onClose={handleCloseNavMenu}
-                ModalProps={{ disableScrollLock: 'true' }}
+                ModalProps={{ disableScrollLock: true }}
                 sx={{
                   display: {
                     xs: 'flex',
@@ -94,7 +94,7 @@ function NavBar() {
                     {tabs.map((tab, index) => {
                       return (
                         <ListItem
-                          key={`${tab}-${index}`}
+                          key={`${tab.name}-${index}`}
                           disablePadding
                           onClick={handleCloseNavMenu}
                         >
@@ -150,7 +150,7 @@ function NavBar() {
               {tabs.map((tab, index) => {
                 return (
                   <Link
-                    key={index}
+                    key={`${tab.name}-${index}`}
                     to={tab.path}
                     component={RouterLink}
                     underline="none"
