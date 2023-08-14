@@ -1,12 +1,11 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Grid, Link, Typography } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
 
 import { CustomTheme } from '../Styling/CustomStyling';
-import {
-  CAREERS_CARDS_PLACEHOLDERS,
-  SOFT_SKILL_LIST,
-} from '../utils/constants';
+import { PrimaryBtn } from '../Styling/CustomStyling.js';
+import { CLASS_SUBJECT_LIST, SOFT_SKILL_LIST } from '../utils/constants';
 import BobaBot from './BobaBot';
 import QuestionCard from './QuestionCard';
 
@@ -14,7 +13,7 @@ function Quiz() {
   const { step } = useParams();
 
   const dataSets = {
-    classes: CAREERS_CARDS_PLACEHOLDERS,
+    classes: CLASS_SUBJECT_LIST,
     skills: SOFT_SKILL_LIST,
   };
   const data = dataSets[step] || dataSets['classes'];
@@ -29,6 +28,27 @@ function Quiz() {
           </Grid>
         ))}
       </Grid>
+      <Link
+        sx={{ color: 'Boba.main' }}
+        underline="none"
+        aria-label="Learn more about other different majors"
+        component={RouterLink}
+        to="/quiz/skills"
+      >
+        <PrimaryBtn
+          sx={{
+            backgroundColor: 'Matcha.main',
+            '&.MuiButtonBase-root': {
+              padding: {
+                xs: '1rem 2.5rem',
+                xl: '1rem 3.25rem',
+              },
+            },
+          }}
+        >
+          <Typography variant="h4">Next</Typography>
+        </PrimaryBtn>
+      </Link>
     </Container>
   );
 }
