@@ -197,7 +197,7 @@ export const CustomTheme = createTheme({
 export const PrimaryBtn = styled(Button)({
   color: '#FFFFFF',
   backgroundColor: '#73956F',
-  borderRadius: '8px',
+  borderRadius: '4px',
   border: 0,
   padding: '1rem 2rem',
   '&:hover': {

@@ -1,13 +1,12 @@
-import { Container, Grid, Link, Typography } from '@mui/material';
+import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom';
 
 import { CustomTheme } from '../Styling/CustomStyling';
-import { PrimaryBtn } from '../Styling/CustomStyling.js';
 import { CLASS_SUBJECT_LIST, SOFT_SKILL_LIST } from '../utils/constants';
 import BobaBot from './BobaBot';
 import QuestionCard from './QuestionCard';
+import QuizButtonContainer from './QuizButtonContainer';
 
 function Quiz() {
   const { step } = useParams();
@@ -21,34 +20,14 @@ function Quiz() {
   return (
     <Container sx={{ width: '100%' }}>
       <Text step={step} />
-      <Grid container justifyContent={{ md: 'center', lg: 'flex-start' }}>
+      <Grid container justifyContent={{ xs: 'center', lg: 'flex-start' }}>
         {data.map((item) => (
           <Grid item key={item.title}>
             <QuestionCard item={item} />
           </Grid>
         ))}
       </Grid>
-      <Link
-        sx={{ color: 'Boba.main' }}
-        underline="none"
-        aria-label="Learn more about other different majors"
-        component={RouterLink}
-        to="/quiz/skills"
-      >
-        <PrimaryBtn
-          sx={{
-            backgroundColor: 'Matcha.main',
-            '&.MuiButtonBase-root': {
-              padding: {
-                xs: '1rem 2.5rem',
-                xl: '1rem 3.25rem',
-              },
-            },
-          }}
-        >
-          <Typography variant="h4">Next</Typography>
-        </PrimaryBtn>
-      </Link>
+      <QuizButtonContainer step={step} />
     </Container>
   );
 }
